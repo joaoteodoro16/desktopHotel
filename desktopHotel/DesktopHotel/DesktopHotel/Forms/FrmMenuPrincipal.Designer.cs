@@ -300,10 +300,7 @@ namespace DesktopHotel.Forms
             // 
             // hóspedesToolStripMenuItem1
             // 
-            this.hóspedesToolStripMenuItem1.Name = "hóspedesToolStripMenuItem1";
-            this.hóspedesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.hóspedesToolStripMenuItem1.Text = "Hóspedes";
-            this.hóspedesToolStripMenuItem1.Click += new System.EventHandler(this.hóspedesToolStripMenuItem1_Click);
+            
             // 
             // FrmMenuPrincipal
             // 
