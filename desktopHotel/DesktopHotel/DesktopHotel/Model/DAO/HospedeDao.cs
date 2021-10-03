@@ -17,7 +17,6 @@ namespace DesktopHotel.Model.DAO
         String query = "";
 
 
-
         public List<HospedeModel> getAll()
         {
             BasicContext con = new BasicContext();
