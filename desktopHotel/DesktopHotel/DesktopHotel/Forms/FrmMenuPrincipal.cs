@@ -25,7 +25,7 @@ namespace DesktopHotel.Forms
 
                 if(result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
                 
             }

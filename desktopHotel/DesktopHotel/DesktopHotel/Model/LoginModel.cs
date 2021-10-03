@@ -8,7 +8,7 @@ namespace DesktopHotel.Model
 {
     class LoginModel
     {
-
+       
         public int codigo { get; set; }
         public String username { get; set; }
         public String user { get; set; }

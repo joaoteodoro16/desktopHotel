@@ -37,9 +37,6 @@ namespace DesktopHotel.Forms
             login.senha = txtSenha.Text;
             login.user = txtUsuario.Text;
      
-
-
-
             valido = loginDao.validaLogin(login);
 
             if (valido)
@@ -47,7 +44,6 @@ namespace DesktopHotel.Forms
               
                 FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
                 
-
                 frmMenuPrincipal.Show();
                 this.Hide();
             }

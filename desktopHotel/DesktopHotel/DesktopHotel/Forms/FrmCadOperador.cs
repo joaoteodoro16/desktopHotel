@@ -178,6 +178,7 @@ namespace DesktopHotel.Forms
         private void gridOperadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LoginModel login = gridOperadores.CurrentRow.DataBoundItem as LoginModel;
+
             txtCodigo.Text = login.codigo.ToString();
             txtUsuario.Text = login.user;
             txtSenha.Text = login.senha;
@@ -200,5 +201,7 @@ namespace DesktopHotel.Forms
         {
             cmbStatus.Text = "";
         }
+
+        
     }
 }

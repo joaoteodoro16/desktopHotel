@@ -13,7 +13,6 @@ namespace DesktopHotel.Model.DAO
     class LoginDao
     {
         Conexao conn = new Conexao();
-        SqlCommand comando = new SqlCommand();
         ExecutaQuery executaQuery = new ExecutaQuery();
         String query = "";
 
@@ -259,7 +258,5 @@ namespace DesktopHotel.Model.DAO
                 return false;
             }
         }
-
-
     }
 }
