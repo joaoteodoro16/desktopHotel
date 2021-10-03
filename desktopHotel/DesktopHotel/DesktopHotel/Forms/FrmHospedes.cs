@@ -28,7 +28,6 @@ namespace DesktopHotel.Forms
             gridHospedes.DataSource = hospedeDao.getAll();
         }
 
-       
         private void btnSalva_Click(object sender, EventArgs e)
         {
             BasicContext context = new BasicContext();

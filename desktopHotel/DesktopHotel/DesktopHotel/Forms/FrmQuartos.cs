@@ -17,7 +17,6 @@ namespace DesktopHotel.Forms
         QuartoDAO quartoDAO = new QuartoDAO();
         QuartoModel quartoModel = new QuartoModel();
         bool existe;
-
         public FrmQuartos()
         {
             InitializeComponent();
@@ -27,7 +26,6 @@ namespace DesktopHotel.Forms
         {
             gridQuartos.DataSource = quartoDAO.getAll();
         }
-
         public void limpaCampos()
         {
             txtNumero.Text = "";
