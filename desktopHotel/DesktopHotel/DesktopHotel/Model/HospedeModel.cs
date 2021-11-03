@@ -24,10 +24,8 @@ namespace DesktopHotel.Model
         public String hos_cidade { get; set; }
         public String hos_bairro { get; set; }
         public String hos_estado { get; set; }
-
+        public String hos_voucher { get; set; }
+        public String hos_usuario { get; set; }
+        public String hos_senha { get; set; }
     }
-
-
-
-
 }

@@ -14,12 +14,11 @@ namespace DesktopHotel.Model.DAO
         Conexao conn = new Conexao();
         SqlCommand comando = new SqlCommand();
         ExecutaQuery executaQuery = new ExecutaQuery();
-        String query = "";
-
-
+      
         public List<HospedeModel> getAll()
         {
             BasicContext con = new BasicContext();
+         
             return con.Hospedes.ToList();
         }
 

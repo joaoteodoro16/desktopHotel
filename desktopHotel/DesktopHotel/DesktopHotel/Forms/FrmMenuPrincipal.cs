@@ -31,6 +31,10 @@ namespace DesktopHotel.Forms
             }
         }
 
-      
+        private void hóspedesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmHospedes frmHospedes = new FrmHospedes();
+            frmHospedes.Show();
+        }
     }
 }

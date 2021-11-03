@@ -32,6 +32,8 @@ namespace DesktopHotel.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hóspedesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hóspedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +55,6 @@ namespace DesktopHotel.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.quartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hóspedesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -77,7 +77,7 @@ namespace DesktopHotel.Forms
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1352, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1344, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,6 +89,19 @@ namespace DesktopHotel.Forms
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
+            // 
+            // quartosToolStripMenuItem
+            // 
+            this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quartosToolStripMenuItem.Text = "Quartos";
+            // 
+            // hóspedesToolStripMenuItem1
+            // 
+            this.hóspedesToolStripMenuItem1.Name = "hóspedesToolStripMenuItem1";
+            this.hóspedesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.hóspedesToolStripMenuItem1.Text = "Hóspedes";
+            this.hóspedesToolStripMenuItem1.Click += new System.EventHandler(this.hóspedesToolStripMenuItem1_Click);
             // 
             // hóspedesToolStripMenuItem
             // 
@@ -133,7 +146,7 @@ namespace DesktopHotel.Forms
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 24);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 730);
+            this.panel9.Size = new System.Drawing.Size(255, 722);
             this.panel9.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -147,7 +160,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(255, 730);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(255, 722);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel3
@@ -279,7 +292,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(255, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1097, 730);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1089, 722);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel13
@@ -289,24 +302,12 @@ namespace DesktopHotel.Forms
             this.panel13.Size = new System.Drawing.Size(200, 100);
             this.panel13.TabIndex = 0;
             // 
-            // quartosToolStripMenuItem
-            // 
-            this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
-            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quartosToolStripMenuItem.Text = "Quartos";
-            // 
-            // hóspedesToolStripMenuItem1
-            // 
-            this.hóspedesToolStripMenuItem1.Name = "hóspedesToolStripMenuItem1";
-            this.hóspedesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.hóspedesToolStripMenuItem1.Text = "Hóspedes";
-            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1352, 754);
+            this.ClientSize = new System.Drawing.Size(1344, 746);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel9);
