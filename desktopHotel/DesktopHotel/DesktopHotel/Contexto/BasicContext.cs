@@ -20,6 +20,7 @@ namespace DesktopHotel.Context
         public DbSet<ProdutoModel> Produto { get; set; }
         public DbSet<ReservaModel> Reserva { get; set; }
         public DbSet<VistoriaModel> Vistoria { get; set; }
+        public DbSet<FuncionarioModel> Funcionario { get; set; }
 
     }
 }
