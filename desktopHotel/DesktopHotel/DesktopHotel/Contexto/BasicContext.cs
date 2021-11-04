@@ -15,7 +15,6 @@ namespace DesktopHotel.Context
         {
         }
 
-        public DbSet<FuncionarioModel> Funcionario { get; set; }
         public DbSet<HospedeModel> Hospedes { get; set; }
         public DbSet<HoteisModel> Hotel { get; set; }
         public DbSet<ProdutoModel> Produto { get; set; }
