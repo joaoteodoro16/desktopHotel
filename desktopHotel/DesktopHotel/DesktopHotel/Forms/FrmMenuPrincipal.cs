@@ -31,6 +31,11 @@ namespace DesktopHotel.Forms
             }
         }
 
-      
+        private void quartosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmQuartos quartos = new FrmQuartos();
+
+            quartos.Show();
+        }
     }
 }

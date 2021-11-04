@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DesktopHotel.Model
 {
-    class ProdutoModel
+    [Table("produtos")]
+    public class ProdutoModel
     {
+        [Key()]
         public int codigo { get; set; }
 
         public String tipo { get; set; }

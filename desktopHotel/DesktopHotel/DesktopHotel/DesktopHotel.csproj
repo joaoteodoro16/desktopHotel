@@ -106,11 +106,23 @@
     <Compile Include="Forms\FrmCadOperador.Designer.cs">
       <DependentUpon>FrmCadOperador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmHospedes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmHospedes.Designer.cs">
       <DependentUpon>FrmHospedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHoteis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHoteis.Designer.cs">
+      <DependentUpon>FrmHoteis.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -124,15 +136,38 @@
     <Compile Include="Forms\FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmQuartos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmQuartos.Designer.cs">
       <DependentUpon>FrmQuartos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReservas.Designer.cs">
+      <DependentUpon>FrmReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVistoria.Designer.cs">
+      <DependentUpon>FrmVistoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DAO\FuncionarioDAO.cs" />
     <Compile Include="Model\DAO\HospedeDao.cs" />
+    <Compile Include="Model\DAO\HotelDAO.cs" />
     <Compile Include="Model\DAO\LoginDao.cs" />
+    <Compile Include="Model\DAO\ProdutoDAO.cs" />
     <Compile Include="Model\DAO\QuartoDAO.cs" />
+    <Compile Include="Model\DAO\ReservaDAO.cs" />
+    <Compile Include="Model\DAO\VistoriaDAO.cs" />
     <Compile Include="Model\FuncionarioModel.cs" />
     <Compile Include="Model\HospedeModel.cs" />
     <Compile Include="Model\HoteisModel.cs" />
@@ -140,7 +175,7 @@
     <Compile Include="Model\ProdutoModel.cs" />
     <Compile Include="Model\QuartoModel.cs" />
     <Compile Include="Model\ReservaModel.cs" />
-    <Compile Include="Model\VistoriaQuartos.cs" />
+    <Compile Include="Model\VistoriaModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Conexao.cs" />
@@ -148,8 +183,14 @@
     <EmbeddedResource Include="Forms\FrmCadOperador.resx">
       <DependentUpon>FrmCadOperador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmHospedes.resx">
       <DependentUpon>FrmHospedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHoteis.resx">
+      <DependentUpon>FrmHoteis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -157,8 +198,17 @@
     <EmbeddedResource Include="Forms\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuartos.resx">
       <DependentUpon>FrmQuartos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReservas.resx">
+      <DependentUpon>FrmReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmVistoria.resx">
+      <DependentUpon>FrmVistoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

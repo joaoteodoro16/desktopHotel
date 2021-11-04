@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DesktopHotel.Model
 {
     [Table("hospedes")]
-    class HospedeModel
+    public class HospedeModel
     {
         [Key()]
         public int hos_cod { get; set; }

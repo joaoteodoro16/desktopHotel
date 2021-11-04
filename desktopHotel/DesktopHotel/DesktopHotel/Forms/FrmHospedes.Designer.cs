@@ -58,10 +58,10 @@ namespace DesktopHotel.Forms
             this.btnSalva = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridHospedes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,19 +337,6 @@ namespace DesktopHotel.Forms
             this.txtPesquisa.Size = new System.Drawing.Size(284, 22);
             this.txtPesquisa.TabIndex = 42;
             // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(883, 208);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(25, 20);
-            this.button4.TabIndex = 43;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -382,6 +369,19 @@ namespace DesktopHotel.Forms
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(207, 23);
             this.cmbEstado.TabIndex = 47;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(883, 208);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(25, 20);
+            this.button4.TabIndex = 43;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // FrmHospedes
             // 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesktopHotel.Model
 {
-    class LoginModel
+    public class LoginModel
     {
        
         public int codigo { get; set; }

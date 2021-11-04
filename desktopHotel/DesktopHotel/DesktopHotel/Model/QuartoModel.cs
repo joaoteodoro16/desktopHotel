@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesktopHotel.Model
 {
-    class QuartoModel
+    public class QuartoModel
     {
         public int numero { get; set; }
         public String andar { get; set; }
