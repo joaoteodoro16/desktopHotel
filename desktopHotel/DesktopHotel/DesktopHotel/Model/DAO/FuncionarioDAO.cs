@@ -27,12 +27,12 @@ namespace DesktopHotel.Model.DAO
 
         public FuncionarioModel funCod(int codigo)
         {
-            return c.Funcionario.Where(f => f.codigo == codigo).FirstOrDefault();
+            return c.Funcionario.Where(f => f.FUN_CODIGO == codigo).FirstOrDefault();
         }
 
         public void Excluir(FuncionarioModel f)
         {
-            f = funCod(f.codigo);
+            f = funCod(f.FUN_CODIGO);
             c.Funcionario.Remove(f);
             c.SaveChanges();
         }

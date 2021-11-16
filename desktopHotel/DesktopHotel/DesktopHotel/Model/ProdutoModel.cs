@@ -12,30 +12,30 @@ namespace DesktopHotel.Model
     public class ProdutoModel
     {
         [Key()]
-        public int codigo { get; set; }
+        public int PRO_CODIGO { get; set; }
 
-        public String tipo { get; set; }
+        public String PRO_TIPO { get; set; }
 
-        public String descricao { get; set; }
+        public String PRO_DESCRICAO { get; set; }
 
-        public DateTime dataCadastro { get; set; }
+        public DateTime PRO_DATA_CADASTRO { get; set; }
 
-        public String fornecedor { get; set; }
+        public String PRO_FORNECEDOR { get; set; }
 
-        public String fabricante { get; set; }
+        public String PRO_FABRICANTE { get; set; }
 
-        public int qtdEstoque { get; set; }
+        public int PRO_QTD_ESTOQUE { get; set; }
 
-        public String unidade { get; set; }
+        public String PRO_UNIDADE { get; set; }
 
-        public double precoCusto { get; set; }
+        public double PRO_PRECO_CUSTO { get; set; }
 
-        public double precoVenda { get; set; }
+        public double PRO_PRECO_VENDA { get; set; }
 
-        public String codBarras { get; set; }
+        public String PRO_COD_BARRAS { get; set; }
 
-        public DateTime dataFabricacao { get; set; }
+        public DateTime PRO_DATA_FABRICACAO { get; set; }
 
-        public DateTime dataValidade { get; set; }
+        public DateTime PRO_DATA_VALIDADE { get; set; }
     }
 }

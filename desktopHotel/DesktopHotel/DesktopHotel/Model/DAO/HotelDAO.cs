@@ -11,27 +11,27 @@ namespace DesktopHotel.Model.DAO
     public class HotelDAO
     {
         BasicContext c = new BasicContext();
-        HoteisModel hoteisModel = new HoteisModel();
+        HotelModel hoteisModel = new HotelModel();
 
-        public List<HoteisModel> getAll()
+        public List<HotelModel> getAll()
         {
             return c.Hotel.ToList();
         }
 
-        public void Salvar(HoteisModel h)
+        public void Salvar(HotelModel h)
         {
             c.Hotel.AddOrUpdate(h);
             c.SaveChanges();
         }
 
-        public HoteisModel hotelCod(int codigo)
+        public HotelModel hotelCod(int codigo)
         {
-            return c.Hotel.Where(h => h.codigo == codigo).FirstOrDefault();
+            return c.Hotel.Where(h => h.HT_CODIGO == codigo).FirstOrDefault();
         }
 
-        public void Excluir(HoteisModel h)
+        public void Excluir(HotelModel h)
         {
-            h = hotelCod(h.codigo);
+            h = hotelCod(h.HT_CODIGO);
             c.Hotel.Remove(h);
             c.SaveChanges();
         }

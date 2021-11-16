@@ -26,12 +26,12 @@ namespace DesktopHotel.Model.DAO
 
         public ReservaModel reservaCod(int codigo)
         {
-            return c.Reserva.Where(r => r.codigo == codigo).FirstOrDefault();
+            return c.Reserva.Where(r => r.RES_CODIGO == codigo).FirstOrDefault();
         }
 
         public void Excluir(ReservaModel r)
         {
-            r = reservaCod(r.codigo);
+            r = reservaCod(r.RES_CODIGO);
             c.Reserva.Remove(r);
             c.SaveChanges();
         }

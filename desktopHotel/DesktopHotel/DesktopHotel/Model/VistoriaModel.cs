@@ -7,23 +7,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DesktopHotel.Model
-{
+{/// <summary>
+/// 
+/// </summary>
     [Table("vistoria")]
     public class VistoriaModel
     {
         [Key()]
-        public int codigo { get; set; }
+        public int VIS_CODIGO { get; set; }
 
-        public String observacao { get; set; }
+        public String VIS_OBSERVACAO { get; set; }
 
-        public String funcionario { get; set; }
+        public String VIS_FUNCIONARIO { get; set; }
 
-        public DateTime dataInicial { get; set; }
+        public DateTime VIS_DATA_INICIAL { get; set; }
 
-        public int codigoProduto { get; set; }
+        public int VIS_CODIGO_PRODUTO { get; set; }
 
-        public String descricao { get; set; }
+        public String VIS_DESCRICAO { get; set; }
 
-        public int codigoQuarto { get; set; }
+        public int VIS_CODIGO_QUARTO { get; set; }
     }
 }

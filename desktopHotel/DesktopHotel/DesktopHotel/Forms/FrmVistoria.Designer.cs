@@ -1,7 +1,7 @@
 ﻿
 namespace DesktopHotel.Forms
 {
-    partial class FrmVistoria
+    partial class frmVistoria
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace DesktopHotel.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVistoria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVistoria));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@ namespace DesktopHotel.Forms
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.gridVistoria = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.recarregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridVistoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@ namespace DesktopHotel.Forms
             this.txtObservacao.Location = new System.Drawing.Point(169, 53);
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(422, 22);
-            this.txtObservacao.TabIndex = 23;
+            this.txtObservacao.TabIndex = 1;
             // 
             // label1
             // 
@@ -95,7 +95,7 @@ namespace DesktopHotel.Forms
             this.txtFuncionario.Location = new System.Drawing.Point(25, 117);
             this.txtFuncionario.Name = "txtFuncionario";
             this.txtFuncionario.Size = new System.Drawing.Size(297, 22);
-            this.txtFuncionario.TabIndex = 25;
+            this.txtFuncionario.TabIndex = 2;
             // 
             // label2
             // 
@@ -122,16 +122,15 @@ namespace DesktopHotel.Forms
             this.txtDataInicial.Location = new System.Drawing.Point(356, 119);
             this.txtDataInicial.Name = "txtDataInicial";
             this.txtDataInicial.Size = new System.Drawing.Size(231, 20);
-            this.txtDataInicial.TabIndex = 27;
+            this.txtDataInicial.TabIndex = 3;
             // 
             // txtCodigoProduto
             // 
-            this.txtCodigoProduto.Enabled = false;
             this.txtCodigoProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoProduto.Location = new System.Drawing.Point(25, 178);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
             this.txtCodigoProduto.Size = new System.Drawing.Size(113, 22);
-            this.txtCodigoProduto.TabIndex = 28;
+            this.txtCodigoProduto.TabIndex = 4;
             // 
             // label4
             // 
@@ -149,7 +148,7 @@ namespace DesktopHotel.Forms
             this.txtDescricao.Location = new System.Drawing.Point(165, 178);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(279, 22);
-            this.txtDescricao.TabIndex = 31;
+            this.txtDescricao.TabIndex = 5;
             // 
             // label5
             // 
@@ -163,12 +162,11 @@ namespace DesktopHotel.Forms
             // 
             // txtCodigoQuarto
             // 
-            this.txtCodigoQuarto.Enabled = false;
             this.txtCodigoQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoQuarto.Location = new System.Drawing.Point(475, 178);
             this.txtCodigoQuarto.Name = "txtCodigoQuarto";
             this.txtCodigoQuarto.Size = new System.Drawing.Size(113, 22);
-            this.txtCodigoQuarto.TabIndex = 32;
+            this.txtCodigoQuarto.TabIndex = 6;
             // 
             // label7
             // 
@@ -191,9 +189,10 @@ namespace DesktopHotel.Forms
             this.btnExcluir.Location = new System.Drawing.Point(414, 224);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(160, 33);
-            this.btnExcluir.TabIndex = 50;
+            this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -206,9 +205,10 @@ namespace DesktopHotel.Forms
             this.btnSalvar.Location = new System.Drawing.Point(224, 224);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(160, 33);
-            this.btnSalvar.TabIndex = 49;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -221,9 +221,10 @@ namespace DesktopHotel.Forms
             this.btnNovo.Location = new System.Drawing.Point(34, 224);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(160, 33);
-            this.btnNovo.TabIndex = 48;
+            this.btnNovo.TabIndex = 8;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click_1);
             // 
             // gridVistoria
             // 
@@ -233,27 +234,29 @@ namespace DesktopHotel.Forms
             this.gridVistoria.Name = "gridVistoria";
             this.gridVistoria.Size = new System.Drawing.Size(593, 242);
             this.gridVistoria.TabIndex = 51;
+            this.gridVistoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridVistoria_CellClick);
             // 
-            // button1
+            // recarregar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(580, 274);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 52;
-            this.button1.UseVisualStyleBackColor = true;
+            this.recarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("recarregar.BackgroundImage")));
+            this.recarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.recarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recarregar.FlatAppearance.BorderSize = 0;
+            this.recarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recarregar.Location = new System.Drawing.Point(580, 274);
+            this.recarregar.Name = "recarregar";
+            this.recarregar.Size = new System.Drawing.Size(25, 20);
+            this.recarregar.TabIndex = 50;
+            this.recarregar.UseVisualStyleBackColor = true;
+            this.recarregar.Click += new System.EventHandler(this.recarregar_Click_1);
             // 
-            // FrmVistoria
+            // frmVistoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(617, 554);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.recarregar);
             this.Controls.Add(this.gridVistoria);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
@@ -272,9 +275,11 @@ namespace DesktopHotel.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label6);
-            this.Name = "FrmVistoria";
+            this.Name = "frmVistoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vistoria";
+            this.Load += new System.EventHandler(this.frmVistoria_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmVistoria_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridVistoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,6 +306,6 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView gridVistoria;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button recarregar;
     }
 }

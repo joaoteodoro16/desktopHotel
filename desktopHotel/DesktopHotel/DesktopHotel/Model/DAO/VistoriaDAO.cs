@@ -27,12 +27,12 @@ namespace DesktopHotel.Model.DAO
 
         public VistoriaModel visCod(int codigo)
         {
-            return c.Vistoria.Where(v => v.codigo == codigo).FirstOrDefault();
+            return c.Vistoria.Where(v => v.VIS_CODIGO == codigo).FirstOrDefault();
         }
 
         public void Excluir(VistoriaModel v)
         {
-            v = visCod(v.codigo);
+            v = visCod(v.VIS_CODIGO);
             c.Vistoria.Remove(v);
             c.SaveChanges();
         }

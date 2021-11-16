@@ -38,6 +38,7 @@ namespace DesktopHotel.Forms
         private void btnNovo_Click(object sender, EventArgs e)
         {
             limpaCampos();
+            txtAndar.Focus();
         }
 
         private bool validar()
@@ -90,13 +91,13 @@ namespace DesktopHotel.Forms
 
             if (!txtNumero.Text.Equals(""))
             {
-                quartoModel.numero = int.Parse(txtNumero.Text);
+                quartoModel.QT_NUMERO = int.Parse(txtNumero.Text);
             }
 
-            quartoModel.andar = txtAndar.Text;
-            quartoModel.valorDiaria = Double.Parse(txtValorDiaria.Text);
-            quartoModel.tipo = cmbTipo.Text;
-            quartoModel.descricao = txtDescricao.Text;
+            quartoModel.QT_ANDAR = txtAndar.Text;
+            quartoModel.QT_VALOR = Double.Parse(txtValorDiaria.Text);
+            quartoModel.QT_TIPO = cmbTipo.Text;
+            quartoModel.QT_DESC = txtDescricao.Text;
 
             existe = quartoDAO.buscarPorNumero(txtNumero.Text);
 
@@ -122,6 +123,7 @@ namespace DesktopHotel.Forms
             
             limpaCampos();
             atualizaGrid();
+            txtAndar.Focus();
         }
 
         private void FrmQuartos_Load(object sender, EventArgs e)
@@ -138,6 +140,7 @@ namespace DesktopHotel.Forms
         private void button4_Click(object sender, EventArgs e)
         {
             atualizaGrid();
+            txtAndar.Focus();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -150,17 +153,20 @@ namespace DesktopHotel.Forms
             }
             limpaCampos();
             atualizaGrid();
+            txtAndar.Focus();
         }
 
         private void gridQuartos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             quartoModel = gridQuartos.CurrentRow.DataBoundItem as QuartoModel;
 
-            txtNumero.Text = quartoModel.numero.ToString();
-            txtAndar.Text = quartoModel.andar.ToString();
-            txtValorDiaria.Text = quartoModel.valorDiaria.ToString();
-            cmbTipo.Text = quartoModel.tipo.ToString();
-            txtDescricao.Text = quartoModel.descricao.ToString();
+            txtNumero.Text = quartoModel.QT_NUMERO.ToString();
+            txtAndar.Text = quartoModel.QT_ANDAR.ToString();
+            txtValorDiaria.Text = quartoModel.QT_VALOR.ToString();
+            cmbTipo.Text = quartoModel.QT_TIPO.ToString();
+            txtDescricao.Text = quartoModel.QT_DESC.ToString();
+
+            txtAndar.Focus();
         }
     }
 }

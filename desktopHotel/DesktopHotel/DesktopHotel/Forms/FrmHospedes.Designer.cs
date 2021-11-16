@@ -90,7 +90,7 @@ namespace DesktopHotel.Forms
             this.txtNome.Location = new System.Drawing.Point(157, 43);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(413, 22);
-            this.txtNome.TabIndex = 16;
+            this.txtNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -108,7 +108,7 @@ namespace DesktopHotel.Forms
             this.txtCpf.Location = new System.Drawing.Point(593, 43);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(149, 22);
-            this.txtCpf.TabIndex = 18;
+            this.txtCpf.TabIndex = 2;
             // 
             // label2
             // 
@@ -126,7 +126,7 @@ namespace DesktopHotel.Forms
             this.txtRg.Location = new System.Drawing.Point(765, 43);
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(149, 22);
-            this.txtRg.TabIndex = 20;
+            this.txtRg.TabIndex = 3;
             // 
             // label3
             // 
@@ -144,7 +144,7 @@ namespace DesktopHotel.Forms
             this.txtEmail.Location = new System.Drawing.Point(21, 100);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(267, 22);
-            this.txtEmail.TabIndex = 22;
+            this.txtEmail.TabIndex = 4;
             // 
             // label4
             // 
@@ -162,7 +162,7 @@ namespace DesktopHotel.Forms
             this.txtCelular.Location = new System.Drawing.Point(317, 100);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(164, 22);
-            this.txtCelular.TabIndex = 24;
+            this.txtCelular.TabIndex = 5;
             // 
             // label5
             // 
@@ -180,7 +180,7 @@ namespace DesktopHotel.Forms
             this.txtDataNascimento.Location = new System.Drawing.Point(510, 100);
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(164, 22);
-            this.txtDataNascimento.TabIndex = 26;
+            this.txtDataNascimento.TabIndex = 6;
             // 
             // label7
             // 
@@ -198,7 +198,7 @@ namespace DesktopHotel.Forms
             this.txtSexo.Location = new System.Drawing.Point(703, 100);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(211, 22);
-            this.txtSexo.TabIndex = 28;
+            this.txtSexo.TabIndex = 7;
             // 
             // label8
             // 
@@ -216,7 +216,7 @@ namespace DesktopHotel.Forms
             this.txtEndereco.Location = new System.Drawing.Point(21, 158);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(267, 22);
-            this.txtEndereco.TabIndex = 30;
+            this.txtEndereco.TabIndex = 8;
             // 
             // label9
             // 
@@ -234,7 +234,7 @@ namespace DesktopHotel.Forms
             this.txtCidade.Location = new System.Drawing.Point(317, 157);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(164, 22);
-            this.txtCidade.TabIndex = 32;
+            this.txtCidade.TabIndex = 9;
             // 
             // label10
             // 
@@ -252,7 +252,7 @@ namespace DesktopHotel.Forms
             this.txtBairro.Location = new System.Drawing.Point(510, 157);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(164, 22);
-            this.txtBairro.TabIndex = 34;
+            this.txtBairro.TabIndex = 10;
             // 
             // label11
             // 
@@ -294,7 +294,7 @@ namespace DesktopHotel.Forms
             this.btnSalvar.Location = new System.Drawing.Point(21, 202);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(160, 33);
-            this.btnSalvar.TabIndex = 39;
+            this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Novo";
             this.btnSalvar.UseVisualStyleBackColor = false;
             // 
@@ -309,7 +309,7 @@ namespace DesktopHotel.Forms
             this.btnSalva.Location = new System.Drawing.Point(211, 202);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(160, 33);
-            this.btnSalva.TabIndex = 40;
+            this.btnSalva.TabIndex = 12;
             this.btnSalva.Text = "Salvar";
             this.btnSalva.UseVisualStyleBackColor = false;
             this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
@@ -325,7 +325,7 @@ namespace DesktopHotel.Forms
             this.button2.Location = new System.Drawing.Point(401, 202);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 33);
-            this.button2.TabIndex = 41;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Excluir";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -368,7 +368,7 @@ namespace DesktopHotel.Forms
             this.cmbEstado.Location = new System.Drawing.Point(707, 157);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(207, 23);
-            this.cmbEstado.TabIndex = 47;
+            this.cmbEstado.TabIndex = 11;
             // 
             // button4
             // 

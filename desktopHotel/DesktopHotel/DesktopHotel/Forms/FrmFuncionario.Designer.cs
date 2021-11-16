@@ -67,13 +67,13 @@ namespace DesktopHotel.Forms
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioEfetivo = new System.Windows.Forms.RadioButton();
+            this.radioDesligado = new System.Windows.Forms.RadioButton();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.gridFuncionario = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.recarregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@ namespace DesktopHotel.Forms
             this.txtNome.Location = new System.Drawing.Point(172, 52);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(412, 22);
-            this.txtNome.TabIndex = 23;
+            this.txtNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -120,7 +120,7 @@ namespace DesktopHotel.Forms
             this.txtCPF.Location = new System.Drawing.Point(615, 52);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(188, 22);
-            this.txtCPF.TabIndex = 25;
+            this.txtCPF.TabIndex = 2;
             // 
             // label2
             // 
@@ -138,7 +138,7 @@ namespace DesktopHotel.Forms
             this.txtRG.Location = new System.Drawing.Point(838, 52);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(188, 22);
-            this.txtRG.TabIndex = 27;
+            this.txtRG.TabIndex = 3;
             // 
             // label3
             // 
@@ -156,7 +156,7 @@ namespace DesktopHotel.Forms
             this.txtEndereco.Location = new System.Drawing.Point(27, 121);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(289, 22);
-            this.txtEndereco.TabIndex = 29;
+            this.txtEndereco.TabIndex = 4;
             // 
             // label4
             // 
@@ -174,7 +174,7 @@ namespace DesktopHotel.Forms
             this.txtBairro.Location = new System.Drawing.Point(352, 121);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(303, 22);
-            this.txtBairro.TabIndex = 31;
+            this.txtBairro.TabIndex = 5;
             // 
             // label5
             // 
@@ -192,7 +192,7 @@ namespace DesktopHotel.Forms
             this.txtCidade.Location = new System.Drawing.Point(681, 121);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(345, 22);
-            this.txtCidade.TabIndex = 33;
+            this.txtCidade.TabIndex = 6;
             // 
             // label7
             // 
@@ -216,19 +216,54 @@ namespace DesktopHotel.Forms
             // 
             // comboEstado
             // 
+            this.comboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEstado.FormattingEnabled = true;
+            this.comboEstado.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO",
+            "DF"});
             this.comboEstado.Location = new System.Drawing.Point(27, 193);
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(121, 21);
-            this.comboEstado.TabIndex = 35;
+            this.comboEstado.TabIndex = 7;
             // 
             // comboEstadoCivil
             // 
+            this.comboEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEstadoCivil.FormattingEnabled = true;
+            this.comboEstadoCivil.Items.AddRange(new object[] {
+            "Solteiro(a)",
+            "Casado(a)",
+            "Separado(a)",
+            "Divorciado(a)",
+            "Viúvo(a)"});
             this.comboEstadoCivil.Location = new System.Drawing.Point(27, 253);
             this.comboEstadoCivil.Name = "comboEstadoCivil";
             this.comboEstadoCivil.Size = new System.Drawing.Size(121, 21);
-            this.comboEstadoCivil.TabIndex = 37;
+            this.comboEstadoCivil.TabIndex = 13;
             // 
             // label9
             // 
@@ -246,7 +281,7 @@ namespace DesktopHotel.Forms
             this.txtCEP.Location = new System.Drawing.Point(172, 191);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(155, 22);
-            this.txtCEP.TabIndex = 39;
+            this.txtCEP.TabIndex = 8;
             // 
             // label10
             // 
@@ -264,7 +299,7 @@ namespace DesktopHotel.Forms
             this.txtCelular.Location = new System.Drawing.Point(352, 191);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(188, 22);
-            this.txtCelular.TabIndex = 41;
+            this.txtCelular.TabIndex = 9;
             // 
             // label11
             // 
@@ -282,7 +317,7 @@ namespace DesktopHotel.Forms
             this.txtBanco.Location = new System.Drawing.Point(569, 191);
             this.txtBanco.Name = "txtBanco";
             this.txtBanco.Size = new System.Drawing.Size(188, 22);
-            this.txtBanco.TabIndex = 43;
+            this.txtBanco.TabIndex = 10;
             // 
             // label12
             // 
@@ -300,7 +335,7 @@ namespace DesktopHotel.Forms
             this.txtAgencia.Location = new System.Drawing.Point(778, 191);
             this.txtAgencia.Name = "txtAgencia";
             this.txtAgencia.Size = new System.Drawing.Size(125, 22);
-            this.txtAgencia.TabIndex = 45;
+            this.txtAgencia.TabIndex = 11;
             // 
             // label13
             // 
@@ -318,7 +353,7 @@ namespace DesktopHotel.Forms
             this.txtPIS.Location = new System.Drawing.Point(927, 191);
             this.txtPIS.Name = "txtPIS";
             this.txtPIS.Size = new System.Drawing.Size(99, 22);
-            this.txtPIS.TabIndex = 47;
+            this.txtPIS.TabIndex = 12;
             // 
             // label14
             // 
@@ -336,7 +371,7 @@ namespace DesktopHotel.Forms
             this.txtQtdFilhos.Location = new System.Drawing.Point(172, 252);
             this.txtQtdFilhos.Name = "txtQtdFilhos";
             this.txtQtdFilhos.Size = new System.Drawing.Size(188, 22);
-            this.txtQtdFilhos.TabIndex = 49;
+            this.txtQtdFilhos.TabIndex = 14;
             // 
             // label15
             // 
@@ -363,7 +398,7 @@ namespace DesktopHotel.Forms
             this.txtDataAdmissao.Location = new System.Drawing.Point(393, 252);
             this.txtDataAdmissao.Name = "txtDataAdmissao";
             this.txtDataAdmissao.Size = new System.Drawing.Size(227, 20);
-            this.txtDataAdmissao.TabIndex = 51;
+            this.txtDataAdmissao.TabIndex = 15;
             // 
             // txtCargo
             // 
@@ -371,7 +406,7 @@ namespace DesktopHotel.Forms
             this.txtCargo.Location = new System.Drawing.Point(644, 252);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(188, 22);
-            this.txtCargo.TabIndex = 53;
+            this.txtCargo.TabIndex = 16;
             // 
             // label17
             // 
@@ -389,7 +424,7 @@ namespace DesktopHotel.Forms
             this.txtSalario.Location = new System.Drawing.Point(845, 252);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(145, 22);
-            this.txtSalario.TabIndex = 55;
+            this.txtSalario.TabIndex = 17;
             // 
             // label18
             // 
@@ -411,27 +446,27 @@ namespace DesktopHotel.Forms
             this.label19.TabIndex = 56;
             this.label19.Text = "Situação do Funcionário";
             // 
-            // radioButton1
+            // radioEfetivo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(42, 316);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 17);
-            this.radioButton1.TabIndex = 57;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Efetivo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioEfetivo.AutoSize = true;
+            this.radioEfetivo.Location = new System.Drawing.Point(42, 316);
+            this.radioEfetivo.Name = "radioEfetivo";
+            this.radioEfetivo.Size = new System.Drawing.Size(58, 17);
+            this.radioEfetivo.TabIndex = 18;
+            this.radioEfetivo.TabStop = true;
+            this.radioEfetivo.Text = "Efetivo";
+            this.radioEfetivo.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioDesligado
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(106, 316);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 17);
-            this.radioButton2.TabIndex = 58;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Desligado";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioDesligado.AutoSize = true;
+            this.radioDesligado.Location = new System.Drawing.Point(106, 316);
+            this.radioDesligado.Name = "radioDesligado";
+            this.radioDesligado.Size = new System.Drawing.Size(72, 17);
+            this.radioDesligado.TabIndex = 19;
+            this.radioDesligado.TabStop = true;
+            this.radioDesligado.Text = "Desligado";
+            this.radioDesligado.UseVisualStyleBackColor = true;
             // 
             // btnExcluir
             // 
@@ -441,12 +476,13 @@ namespace DesktopHotel.Forms
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(643, 377);
+            this.btnExcluir.Location = new System.Drawing.Point(672, 300);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(160, 33);
-            this.btnExcluir.TabIndex = 61;
+            this.btnExcluir.TabIndex = 22;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click_1);
             // 
             // btnSalvar
             // 
@@ -456,12 +492,13 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(453, 377);
+            this.btnSalvar.Location = new System.Drawing.Point(482, 300);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(160, 33);
-            this.btnSalvar.TabIndex = 60;
+            this.btnSalvar.TabIndex = 20;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // btnNovo
             // 
@@ -471,48 +508,51 @@ namespace DesktopHotel.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(263, 377);
+            this.btnNovo.Location = new System.Drawing.Point(292, 300);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(160, 33);
-            this.btnNovo.TabIndex = 59;
+            this.btnNovo.TabIndex = 21;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // gridFuncionario
             // 
             this.gridFuncionario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gridFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridFuncionario.Location = new System.Drawing.Point(12, 450);
+            this.gridFuncionario.Location = new System.Drawing.Point(12, 349);
             this.gridFuncionario.Name = "gridFuncionario";
-            this.gridFuncionario.Size = new System.Drawing.Size(1028, 287);
+            this.gridFuncionario.Size = new System.Drawing.Size(1028, 268);
             this.gridFuncionario.TabIndex = 62;
+            this.gridFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridFuncionario_CellClick);
             // 
-            // button1
+            // recarregar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1015, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 63;
-            this.button1.UseVisualStyleBackColor = true;
+            this.recarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("recarregar.BackgroundImage")));
+            this.recarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.recarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recarregar.FlatAppearance.BorderSize = 0;
+            this.recarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recarregar.Location = new System.Drawing.Point(1015, 323);
+            this.recarregar.Name = "recarregar";
+            this.recarregar.Size = new System.Drawing.Size(25, 20);
+            this.recarregar.TabIndex = 50;
+            this.recarregar.UseVisualStyleBackColor = true;
+            this.recarregar.Click += new System.EventHandler(this.recarregar_Click);
             // 
             // FrmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1052, 749);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1052, 643);
+            this.Controls.Add(this.recarregar);
             this.Controls.Add(this.gridFuncionario);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioDesligado);
+            this.Controls.Add(this.radioEfetivo);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.label18);
@@ -552,7 +592,9 @@ namespace DesktopHotel.Forms
             this.Controls.Add(this.label6);
             this.Name = "FrmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Funcionários";
+            this.Load += new System.EventHandler(this.FrmFuncionario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -598,12 +640,12 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioEfetivo;
+        private System.Windows.Forms.RadioButton radioDesligado;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView gridFuncionario;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button recarregar;
     }
 }

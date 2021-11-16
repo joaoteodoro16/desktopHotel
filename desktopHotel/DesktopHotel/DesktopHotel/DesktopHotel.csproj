@@ -170,7 +170,7 @@
     <Compile Include="Model\DAO\VistoriaDAO.cs" />
     <Compile Include="Model\FuncionarioModel.cs" />
     <Compile Include="Model\HospedeModel.cs" />
-    <Compile Include="Model\HoteisModel.cs" />
+    <Compile Include="Model\HotelModel.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Model\ProdutoModel.cs" />
     <Compile Include="Model\QuartoModel.cs" />
