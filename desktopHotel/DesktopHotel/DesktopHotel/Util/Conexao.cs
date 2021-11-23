@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,13 +11,13 @@ namespace DesktopHotel.Util
 {
     class Conexao
     { 
-        SqlConnection conn = new SqlConnection();
+        MySqlConnection conn = new MySqlConnection();
         public Conexao()
         {
-            conn.ConnectionString = "Data Source=SQL5108.site4now.net;Initial Catalog=db_a79e17_bdhotel;User ID=db_a79e17_bdhotel_admin;Password=admin12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            conn.ConnectionString = "Server=servidorpim.cvhukkdl0e2n.sa-east-1.rds.amazonaws.com;Database=bd_hotelaria;Uid=root;Pwd=root12345;";
         }
 
-        public SqlConnection conectar()
+        public MySqlConnection conectar()
         {
             if(conn.State == System.Data.ConnectionState.Closed)
             {
