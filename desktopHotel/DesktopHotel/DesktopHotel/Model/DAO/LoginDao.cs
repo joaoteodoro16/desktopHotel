@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +37,7 @@ namespace DesktopHotel.Model.DAO
                     conn.desconectar();
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro ao buscar login" + ex.Message);
                 return false;
@@ -56,7 +56,7 @@ namespace DesktopHotel.Model.DAO
                 conn.desconectar();
                 MessageBox.Show("Cadastro realizado com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -91,7 +91,7 @@ namespace DesktopHotel.Model.DAO
                 conn.desconectar();
                 return lista;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
                 return null;
@@ -130,7 +130,7 @@ namespace DesktopHotel.Model.DAO
 
                 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
                 return null;
@@ -160,7 +160,7 @@ namespace DesktopHotel.Model.DAO
                 }
                 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
                 return false;
@@ -179,7 +179,7 @@ namespace DesktopHotel.Model.DAO
                 executaQuery.executaComando(query);
                 conn.desconectar();
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -206,7 +206,7 @@ namespace DesktopHotel.Model.DAO
                 }
 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
                 return false;
@@ -225,7 +225,7 @@ namespace DesktopHotel.Model.DAO
                 conn.desconectar();
                 MessageBox.Show("Alteração realizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -252,7 +252,7 @@ namespace DesktopHotel.Model.DAO
                     return false;
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro ao buscar login" + ex.Message);
                 return false;

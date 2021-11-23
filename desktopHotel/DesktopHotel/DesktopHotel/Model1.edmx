@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bd_hotelariaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FUNCIONARIO">
+          <Key>
+            <PropertyRef Name="FUN_CODIGO" />
+          </Key>
+          <Property Name="FUN_CODIGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FUN_NOME" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FUN_CPF" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="FUN_RG" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="FUN_ENDERECO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FUN_BAIRRO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FUN_CIDADE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FUN_ESTADO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_CEP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_CELULAR_TELEFONE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_BANCO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_AGENCIA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_PIS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_ESTADO_CIVIL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_QTD_FILHOS" Type="int" Nullable="false" />
+          <Property Name="FUN_ADMISSAO" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="FUN_HORARIO" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="FUN_CARGO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUN_SALARIO" Type="float" Nullable="false" />
+          <Property Name="FUN_SITUACAO" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="HOTEIS">
+          <Key>
+            <PropertyRef Name="HT_CODIGO" />
+          </Key>
+          <Property Name="HT_CODIGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HT_NOME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HT_CNPJ" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="HT_ENDERECO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HT_CIDADE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HT_ESTADO" Type="varchar" MaxLength="50" />
+          <Property Name="HT_TELEFONE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LOGIN">
+          <Key>
+            <PropertyRef Name="LOG_COD" />
+          </Key>
+          <Property Name="LOG_COD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LOG_USERNAME" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="LOG_USER" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LOG_SENHA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LOG_NIVEL" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LOG_STATUS" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="PRODUTOS">
+          <Key>
+            <PropertyRef Name="PRO_CODIGO" />
+          </Key>
+          <Property Name="PRO_CODIGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRO_TIPO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRO_DESCRICAO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PRO_DATA_CADASTRO" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="PRO_FORNECEDOR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRO_FABRICANTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRO_QTD_ESTOQUE" Type="int" Nullable="false" />
+          <Property Name="PRO_UNIDADE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRO_PRECO_CUSTO" Type="double" Nullable="false" />
+          <Property Name="PRO_PRECO_VENDA" Type="double" Nullable="false" />
+          <Property Name="PRO_COD_BARRAS" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PRO_DATA_FABRICACAO" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="PRO_DATA_VALIDADE" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QUARTOS">
+          <Key>
+            <PropertyRef Name="QT_NUMERO" />
+          </Key>
+          <Property Name="QT_NUMERO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QT_ANDAR" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="QT_VALOR" Type="float" Nullable="false" />
+          <Property Name="QT_TIPO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="QT_DESC" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VISTORIA">
+          <Key>
+            <PropertyRef Name="VIS_CODIGO" />
+          </Key>
+          <Property Name="VIS_CODIGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VIS_OBSERVACAO" Type="varchar" MaxLength="50" />
+          <Property Name="VIS_FUNCIONARIO" Type="varchar" MaxLength="50" />
+          <Property Name="VIS_DATA_INICIAL" Type="date" />
+          <Property Name="VIS_CODIGO_PRODUTO" Type="int" />
+          <Property Name="VIS_DESCRICAO" Type="varchar" MaxLength="50" />
+          <Property Name="VIS_CODIGO_QUARTO" Type="int" />
+        </EntityType>
+        <EntityContainer Name="bd_hotelariaModelStoreContainer">
+          <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" Schema="bd_hotelaria" store:Type="Tables" />
+          <EntitySet Name="HOTEIS" EntityType="Self.HOTEIS" Schema="bd_hotelaria" store:Type="Tables" />
+          <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="bd_hotelaria" store:Type="Tables" />
+          <EntitySet Name="PRODUTOS" EntityType="Self.PRODUTOS" Schema="bd_hotelaria" store:Type="Tables" />
+          <EntitySet Name="QUARTOS" EntityType="Self.QUARTOS" Schema="bd_hotelaria" store:Type="Tables" />
+          <EntitySet Name="VISTORIA" EntityType="Self.VISTORIA" Schema="bd_hotelaria" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bd_hotelariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FUNCIONARIO">
+          <Key>
+            <PropertyRef Name="FUN_CODIGO" />
+          </Key>
+          <Property Name="FUN_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FUN_NOME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_RG" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_ENDERECO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_BAIRRO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_CIDADE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_CEP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_CELULAR_TELEFONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_BANCO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_AGENCIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_PIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_ESTADO_CIVIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_QTD_FILHOS" Type="Int32" Nullable="false" />
+          <Property Name="FUN_ADMISSAO" Type="DateTime" Nullable="false" />
+          <Property Name="FUN_HORARIO" Type="DateTime" Nullable="false" />
+          <Property Name="FUN_CARGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FUN_SALARIO" Type="Single" Nullable="false" />
+          <Property Name="FUN_SITUACAO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HOTEIS">
+          <Key>
+            <PropertyRef Name="HT_CODIGO" />
+          </Key>
+          <Property Name="HT_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HT_NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HT_CNPJ" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HT_ENDERECO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HT_CIDADE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HT_ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HT_TELEFONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LOGIN">
+          <Key>
+            <PropertyRef Name="LOG_COD" />
+          </Key>
+          <Property Name="LOG_COD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LOG_USERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOG_USER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOG_SENHA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOG_NIVEL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOG_STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PRODUTOS">
+          <Key>
+            <PropertyRef Name="PRO_CODIGO" />
+          </Key>
+          <Property Name="PRO_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRO_TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRO_DESCRICAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRO_DATA_CADASTRO" Type="DateTime" Nullable="false" />
+          <Property Name="PRO_FORNECEDOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRO_FABRICANTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRO_QTD_ESTOQUE" Type="Int32" Nullable="false" />
+          <Property Name="PRO_UNIDADE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRO_PRECO_CUSTO" Type="Double" Nullable="false" />
+          <Property Name="PRO_PRECO_VENDA" Type="Double" Nullable="false" />
+          <Property Name="PRO_COD_BARRAS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRO_DATA_FABRICACAO" Type="DateTime" Nullable="false" />
+          <Property Name="PRO_DATA_VALIDADE" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QUARTOS">
+          <Key>
+            <PropertyRef Name="QT_NUMERO" />
+          </Key>
+          <Property Name="QT_NUMERO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QT_ANDAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QT_VALOR" Type="Single" Nullable="false" />
+          <Property Name="QT_TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QT_DESC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VISTORIA">
+          <Key>
+            <PropertyRef Name="VIS_CODIGO" />
+          </Key>
+          <Property Name="VIS_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VIS_OBSERVACAO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VIS_FUNCIONARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VIS_DATA_INICIAL" Type="DateTime" />
+          <Property Name="VIS_CODIGO_PRODUTO" Type="Int32" />
+          <Property Name="VIS_DESCRICAO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VIS_CODIGO_QUARTO" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="bd_hotelariaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" />
+          <EntitySet Name="HOTEIS" EntityType="Self.HOTEIS" />
+          <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
+          <EntitySet Name="PRODUTOS" EntityType="Self.PRODUTOS" />
+          <EntitySet Name="QUARTOS" EntityType="Self.QUARTOS" />
+          <EntitySet Name="VISTORIA" EntityType="Self.VISTORIA" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bd_hotelariaModelStoreContainer" CdmEntityContainer="bd_hotelariaEntities">
+          <EntitySetMapping Name="FUNCIONARIO">
+            <EntityTypeMapping TypeName="bd_hotelariaModel.FUNCIONARIO">
+              <MappingFragment StoreEntitySet="FUNCIONARIO">
+                <ScalarProperty Name="FUN_CODIGO" ColumnName="FUN_CODIGO" />
+                <ScalarProperty Name="FUN_NOME" ColumnName="FUN_NOME" />
+                <ScalarProperty Name="FUN_CPF" ColumnName="FUN_CPF" />
+                <ScalarProperty Name="FUN_RG" ColumnName="FUN_RG" />
+                <ScalarProperty Name="FUN_ENDERECO" ColumnName="FUN_ENDERECO" />
+                <ScalarProperty Name="FUN_BAIRRO" ColumnName="FUN_BAIRRO" />
+                <ScalarProperty Name="FUN_CIDADE" ColumnName="FUN_CIDADE" />
+                <ScalarProperty Name="FUN_ESTADO" ColumnName="FUN_ESTADO" />
+                <ScalarProperty Name="FUN_CEP" ColumnName="FUN_CEP" />
+                <ScalarProperty Name="FUN_CELULAR_TELEFONE" ColumnName="FUN_CELULAR_TELEFONE" />
+                <ScalarProperty Name="FUN_BANCO" ColumnName="FUN_BANCO" />
+                <ScalarProperty Name="FUN_AGENCIA" ColumnName="FUN_AGENCIA" />
+                <ScalarProperty Name="FUN_PIS" ColumnName="FUN_PIS" />
+                <ScalarProperty Name="FUN_ESTADO_CIVIL" ColumnName="FUN_ESTADO_CIVIL" />
+                <ScalarProperty Name="FUN_QTD_FILHOS" ColumnName="FUN_QTD_FILHOS" />
+                <ScalarProperty Name="FUN_ADMISSAO" ColumnName="FUN_ADMISSAO" />
+                <ScalarProperty Name="FUN_HORARIO" ColumnName="FUN_HORARIO" />
+                <ScalarProperty Name="FUN_CARGO" ColumnName="FUN_CARGO" />
+                <ScalarProperty Name="FUN_SALARIO" ColumnName="FUN_SALARIO" />
+                <ScalarProperty Name="FUN_SITUACAO" ColumnName="FUN_SITUACAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOTEIS">
+            <EntityTypeMapping TypeName="bd_hotelariaModel.HOTEIS">
+              <MappingFragment StoreEntitySet="HOTEIS">
+                <ScalarProperty Name="HT_CODIGO" ColumnName="HT_CODIGO" />
+                <ScalarProperty Name="HT_NOME" ColumnName="HT_NOME" />
+                <ScalarProperty Name="HT_CNPJ" ColumnName="HT_CNPJ" />
+                <ScalarProperty Name="HT_ENDERECO" ColumnName="HT_ENDERECO" />
+                <ScalarProperty Name="HT_CIDADE" ColumnName="HT_CIDADE" />
+                <ScalarProperty Name="HT_ESTADO" ColumnName="HT_ESTADO" />
+                <ScalarProperty Name="HT_TELEFONE" ColumnName="HT_TELEFONE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOGIN">
+            <EntityTypeMapping TypeName="bd_hotelariaModel.LOGIN">
+              <MappingFragment StoreEntitySet="LOGIN">
+                <ScalarProperty Name="LOG_COD" ColumnName="LOG_COD" />
+                <ScalarProperty Name="LOG_USERNAME" ColumnName="LOG_USERNAME" />
+                <ScalarProperty Name="LOG_USER" ColumnName="LOG_USER" />
+                <ScalarProperty Name="LOG_SENHA" ColumnName="LOG_SENHA" />
+                <ScalarProperty Name="LOG_NIVEL" ColumnName="LOG_NIVEL" />
+                <ScalarProperty Name="LOG_STATUS" ColumnName="LOG_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUTOS">
+            <EntityTypeMapping TypeName="bd_hotelariaModel.PRODUTOS">
+              <MappingFragment StoreEntitySet="PRODUTOS">
+                <ScalarProperty Name="PRO_CODIGO" ColumnName="PRO_CODIGO" />
+                <ScalarProperty Name="PRO_TIPO" ColumnName="PRO_TIPO" />
+                <ScalarProperty Name="PRO_DESCRICAO" ColumnName="PRO_DESCRICAO" />
+                <ScalarProperty Name="PRO_DATA_CADASTRO" ColumnName="PRO_DATA_CADASTRO" />
+                <ScalarProperty Name="PRO_FORNECEDOR" ColumnName="PRO_FORNECEDOR" />
+                <ScalarProperty Name="PRO_FABRICANTE" ColumnName="PRO_FABRICANTE" />
+                <ScalarProperty Name="PRO_QTD_ESTOQUE" ColumnName="PRO_QTD_ESTOQUE" />
+                <ScalarProperty Name="PRO_UNIDADE" ColumnName="PRO_UNIDADE" />
+                <ScalarProperty Name="PRO_PRECO_CUSTO" ColumnName="PRO_PRECO_CUSTO" />
+                <ScalarProperty Name="PRO_PRECO_VENDA" ColumnName="PRO_PRECO_VENDA" />
+                <ScalarProperty Name="PRO_COD_BARRAS" ColumnName="PRO_COD_BARRAS" />
+                <ScalarProperty Name="PRO_DATA_FABRICACAO" ColumnName="PRO_DATA_FABRICACAO" />
+                <ScalarProperty Name="PRO_DATA_VALIDADE" ColumnName="PRO_DATA_VALIDADE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUARTOS">
+            <EntityTypeMapping TypeName="bd_hotelariaModel.QUARTOS">
+              <MappingFragment StoreEntitySet="QUARTOS">
+                <ScalarProperty Name="QT_NUMERO" ColumnName="QT_NUMERO" />
+                <ScalarProperty Name="QT_ANDAR" ColumnName="QT_ANDAR" />
+                <ScalarProperty Name="QT_VALOR" ColumnName="QT_VALOR" />
+                <ScalarProperty Name="QT_TIPO" ColumnName="QT_TIPO" />
+                <ScalarProperty Name="QT_DESC" ColumnName="QT_DESC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VISTORIA">
+            <EntityTypeMapping TypeName="bd_hotelariaModel.VISTORIA">
+              <MappingFragment StoreEntitySet="VISTORIA">
+                <ScalarProperty Name="VIS_CODIGO" ColumnName="VIS_CODIGO" />
+                <ScalarProperty Name="VIS_OBSERVACAO" ColumnName="VIS_OBSERVACAO" />
+                <ScalarProperty Name="VIS_FUNCIONARIO" ColumnName="VIS_FUNCIONARIO" />
+                <ScalarProperty Name="VIS_DATA_INICIAL" ColumnName="VIS_DATA_INICIAL" />
+                <ScalarProperty Name="VIS_CODIGO_PRODUTO" ColumnName="VIS_CODIGO_PRODUTO" />
+                <ScalarProperty Name="VIS_DESCRICAO" ColumnName="VIS_DESCRICAO" />
+                <ScalarProperty Name="VIS_CODIGO_QUARTO" ColumnName="VIS_CODIGO_QUARTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

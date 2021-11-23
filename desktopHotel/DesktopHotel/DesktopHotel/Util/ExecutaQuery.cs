@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +11,14 @@ namespace DesktopHotel.Util
 {
     class ExecutaQuery
     {
+        
+
+
         //Realiza UPDATE, INSERT, DELETE
         public void executaComando(String query)
         {
             Conexao conn = new Conexao();
-            MySqlCommand comando = new MySqlCommand();
+            SqlCommand comando = new SqlCommand();
             comando.CommandText = query;
 
             try
@@ -25,7 +28,7 @@ namespace DesktopHotel.Util
                 conn.desconectar();
 
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro ao executar o comando sql: "+ex.Message);
             }
@@ -41,14 +44,14 @@ namespace DesktopHotel.Util
             {
                 //Passar a query e a conexao
 
-                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, conn.conectar());
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn.conectar());
                
                 DataTable dados = new DataTable();
 
                 dataAdapter.Fill(dados);
                 return dados;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro ao executar o comando sql: " + ex.Message);
                 return null;
