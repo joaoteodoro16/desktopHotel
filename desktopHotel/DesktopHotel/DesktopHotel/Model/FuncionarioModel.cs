@@ -12,43 +12,42 @@ namespace DesktopHotel.Model
     public class FuncionarioModel
     {
         [Key()]
-        public int codigo { get; set; }
+        public int FUN_CODIGO { get; set; }
 
-        public String nome { get; set; }
+        public String FUN_NOME { get; set; }
 
-        public String cpf { get; set; }
+        public String FUN_CPF { get; set; }
 
-        public String rg { get; set; }
-        public String endereco { get; set; }
+        public String FUN_RG { get; set; }
 
-        public String bairro { get; set; }
+        public String FUN_ENDERECO { get; set; }
 
-        public String cidade { get; set; }
+        public String FUN_BAIRRO { get; set; }
 
-        public String estado { get; set; }
+        public String FUN_CIDADE { get; set; }
+
+        public String FUN_ESTADO { get; set; }
     
-        public String cep { get; set; }
+        public String FUN_CEP { get; set; }
 
-        public String celularTelefone { get; set; }
+        public String FUN_CELULAR_TELEFONE { get; set; }
 
-        public String banco { get; set; }
+        public String FUN_BANCO { get; set; }
 
-        public String agencia { get; set; }
+        public String FUN_AGENCIA { get; set; }
 
-        public String pis { get; set; }
+        public String FUN_PIS { get; set; }
 
-        public String estadoCivil { get; set; }
+        public String FUN_ESTADO_CIVIL { get; set; }
 
-        public int qtdFilhos { get; set; }
+        public int FUN_QTD_FILHOS { get; set; }
 
-        public String admissao { get; set; }
+        public DateTime FUN_ADMISSAO { get; set; }
 
-        public DateTime horario { get; set; }
+        public String FUN_CARGO { get; set; }
 
-        public String cargo { get; set; }
+        public double FUN_SALARIO { get; set; }
 
-        public double salario { get; set; }
-
-        public String situacao { get; set; }
+        public String FUN_SITUACAO { get; set; }
     }
 }

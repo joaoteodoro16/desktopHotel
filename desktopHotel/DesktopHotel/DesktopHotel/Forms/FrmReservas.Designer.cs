@@ -56,7 +56,7 @@ namespace DesktopHotel.Forms
             this.gridReservas = new System.Windows.Forms.DataGridView();
             this.txtQuarto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.recarregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridReservas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +95,7 @@ namespace DesktopHotel.Forms
             this.txtNomeHospede.Location = new System.Drawing.Point(159, 53);
             this.txtNomeHospede.Name = "txtNomeHospede";
             this.txtNomeHospede.Size = new System.Drawing.Size(188, 22);
-            this.txtNomeHospede.TabIndex = 21;
+            this.txtNomeHospede.TabIndex = 1;
             // 
             // label2
             // 
@@ -113,7 +113,7 @@ namespace DesktopHotel.Forms
             this.txtAndar.Location = new System.Drawing.Point(485, 53);
             this.txtAndar.Name = "txtAndar";
             this.txtAndar.Size = new System.Drawing.Size(113, 22);
-            this.txtAndar.TabIndex = 23;
+            this.txtAndar.TabIndex = 3;
             // 
             // txtTipoQuarto
             // 
@@ -121,7 +121,7 @@ namespace DesktopHotel.Forms
             this.txtTipoQuarto.Location = new System.Drawing.Point(612, 53);
             this.txtTipoQuarto.Name = "txtTipoQuarto";
             this.txtTipoQuarto.Size = new System.Drawing.Size(113, 22);
-            this.txtTipoQuarto.TabIndex = 25;
+            this.txtTipoQuarto.TabIndex = 4;
             // 
             // label3
             // 
@@ -139,7 +139,7 @@ namespace DesktopHotel.Forms
             this.txtDiaria.Location = new System.Drawing.Point(27, 118);
             this.txtDiaria.Name = "txtDiaria";
             this.txtDiaria.Size = new System.Drawing.Size(113, 22);
-            this.txtDiaria.TabIndex = 27;
+            this.txtDiaria.TabIndex = 5;
             // 
             // label4
             // 
@@ -157,7 +157,7 @@ namespace DesktopHotel.Forms
             this.txtQtd.Location = new System.Drawing.Point(158, 118);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(113, 22);
-            this.txtQtd.TabIndex = 29;
+            this.txtQtd.TabIndex = 6;
             // 
             // label5
             // 
@@ -181,11 +181,17 @@ namespace DesktopHotel.Forms
             // 
             // comboPagamento
             // 
+            this.comboPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPagamento.FormattingEnabled = true;
+            this.comboPagamento.Items.AddRange(new object[] {
+            "Dinheiro ",
+            "Cartão de Crédito",
+            "Cartão de Débito",
+            "Boleto Bancário"});
             this.comboPagamento.Location = new System.Drawing.Point(315, 120);
             this.comboPagamento.Name = "comboPagamento";
             this.comboPagamento.Size = new System.Drawing.Size(121, 21);
-            this.comboPagamento.TabIndex = 31;
+            this.comboPagamento.TabIndex = 7;
             // 
             // txtTotal
             // 
@@ -193,7 +199,7 @@ namespace DesktopHotel.Forms
             this.txtTotal.Location = new System.Drawing.Point(479, 118);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(113, 22);
-            this.txtTotal.TabIndex = 33;
+            this.txtTotal.TabIndex = 8;
             // 
             // label8
             // 
@@ -211,7 +217,7 @@ namespace DesktopHotel.Forms
             this.txtVoucher.Location = new System.Drawing.Point(612, 120);
             this.txtVoucher.Name = "txtVoucher";
             this.txtVoucher.Size = new System.Drawing.Size(113, 22);
-            this.txtVoucher.TabIndex = 35;
+            this.txtVoucher.TabIndex = 9;
             // 
             // label9
             // 
@@ -229,7 +235,7 @@ namespace DesktopHotel.Forms
             this.txtParcelado.Location = new System.Drawing.Point(27, 186);
             this.txtParcelado.Name = "txtParcelado";
             this.txtParcelado.Size = new System.Drawing.Size(113, 22);
-            this.txtParcelado.TabIndex = 37;
+            this.txtParcelado.TabIndex = 10;
             // 
             // label10
             // 
@@ -252,9 +258,10 @@ namespace DesktopHotel.Forms
             this.btnExcluir.Location = new System.Drawing.Point(552, 175);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(160, 33);
-            this.btnExcluir.TabIndex = 47;
+            this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click_1);
             // 
             // btnSalvar
             // 
@@ -267,9 +274,10 @@ namespace DesktopHotel.Forms
             this.btnSalvar.Location = new System.Drawing.Point(362, 175);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(160, 33);
-            this.btnSalvar.TabIndex = 46;
+            this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // btnNovo
             // 
@@ -282,9 +290,10 @@ namespace DesktopHotel.Forms
             this.btnNovo.Location = new System.Drawing.Point(172, 175);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(160, 33);
-            this.btnNovo.TabIndex = 45;
+            this.btnNovo.TabIndex = 12;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // gridReservas
             // 
@@ -294,6 +303,7 @@ namespace DesktopHotel.Forms
             this.gridReservas.Name = "gridReservas";
             this.gridReservas.Size = new System.Drawing.Size(776, 279);
             this.gridReservas.TabIndex = 48;
+            this.gridReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridReservas_CellClick);
             // 
             // txtQuarto
             // 
@@ -301,7 +311,7 @@ namespace DesktopHotel.Forms
             this.txtQuarto.Location = new System.Drawing.Point(363, 53);
             this.txtQuarto.Name = "txtQuarto";
             this.txtQuarto.Size = new System.Drawing.Size(113, 22);
-            this.txtQuarto.TabIndex = 51;
+            this.txtQuarto.TabIndex = 2;
             // 
             // label11
             // 
@@ -313,18 +323,19 @@ namespace DesktopHotel.Forms
             this.label11.TabIndex = 50;
             this.label11.Text = "Quarto";
             // 
-            // button1
+            // recarregar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(763, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 49;
-            this.button1.UseVisualStyleBackColor = true;
+            this.recarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("recarregar.BackgroundImage")));
+            this.recarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.recarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recarregar.FlatAppearance.BorderSize = 0;
+            this.recarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recarregar.Location = new System.Drawing.Point(763, 223);
+            this.recarregar.Name = "recarregar";
+            this.recarregar.Size = new System.Drawing.Size(25, 20);
+            this.recarregar.TabIndex = 50;
+            this.recarregar.UseVisualStyleBackColor = true;
+            this.recarregar.Click += new System.EventHandler(this.recarregar_Click);
             // 
             // FrmReservas
             // 
@@ -334,7 +345,7 @@ namespace DesktopHotel.Forms
             this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.txtQuarto);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.recarregar);
             this.Controls.Add(this.gridReservas);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
@@ -362,6 +373,8 @@ namespace DesktopHotel.Forms
             this.Name = "FrmReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservas";
+            this.Load += new System.EventHandler(this.FrmReservas_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmReservas_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridReservas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -394,7 +407,7 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView gridReservas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button recarregar;
         private System.Windows.Forms.TextBox txtQuarto;
         private System.Windows.Forms.Label label11;
     }

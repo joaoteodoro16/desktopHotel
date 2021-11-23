@@ -26,12 +26,12 @@ namespace DesktopHotel.Model.DAO
 
         public ProdutoModel proCod(int codigo)
         {
-            return c.Produto.Where(p => p.codigo == codigo).FirstOrDefault();
+            return c.Produto.Where(p => p.PRO_CODIGO == codigo).FirstOrDefault();
         }
 
         public void Excluir(ProdutoModel p)
         {
-            p = proCod(p.codigo);
+            p = proCod(p.PRO_CODIGO);
             c.Produto.Remove(p);
             c.SaveChanges();
         }

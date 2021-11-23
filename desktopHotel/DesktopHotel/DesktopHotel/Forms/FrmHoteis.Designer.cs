@@ -30,7 +30,7 @@ namespace DesktopHotel.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHoteis));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@ namespace DesktopHotel.Forms
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.recarregar = new System.Windows.Forms.Button();
             this.gridHoteis = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridHoteis)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +88,7 @@ namespace DesktopHotel.Forms
             this.txtNome.Location = new System.Drawing.Point(169, 49);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(202, 22);
-            this.txtNome.TabIndex = 20;
+            this.txtNome.TabIndex = 1;
             // 
             // label2
             // 
@@ -106,7 +106,7 @@ namespace DesktopHotel.Forms
             this.txtCNPJ.Location = new System.Drawing.Point(403, 49);
             this.txtCNPJ.Name = "txtCNPJ";
             this.txtCNPJ.Size = new System.Drawing.Size(202, 22);
-            this.txtCNPJ.TabIndex = 22;
+            this.txtCNPJ.TabIndex = 2;
             // 
             // label3
             // 
@@ -124,7 +124,7 @@ namespace DesktopHotel.Forms
             this.txtEndereco.Location = new System.Drawing.Point(28, 119);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(266, 22);
-            this.txtEndereco.TabIndex = 24;
+            this.txtEndereco.TabIndex = 3;
             // 
             // txtCidade
             // 
@@ -132,7 +132,7 @@ namespace DesktopHotel.Forms
             this.txtCidade.Location = new System.Drawing.Point(316, 119);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(289, 22);
-            this.txtCidade.TabIndex = 25;
+            this.txtCidade.TabIndex = 4;
             // 
             // label4
             // 
@@ -160,7 +160,7 @@ namespace DesktopHotel.Forms
             this.txtTelefone.Location = new System.Drawing.Point(173, 190);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(149, 22);
-            this.txtTelefone.TabIndex = 30;
+            this.txtTelefone.TabIndex = 6;
             // 
             // label7
             // 
@@ -176,10 +176,37 @@ namespace DesktopHotel.Forms
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO",
+            "DF"});
             this.cmbEstado.Location = new System.Drawing.Point(29, 192);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
-            this.cmbEstado.TabIndex = 31;
+            this.cmbEstado.TabIndex = 5;
             // 
             // btnExcluir
             // 
@@ -192,9 +219,10 @@ namespace DesktopHotel.Forms
             this.btnExcluir.Location = new System.Drawing.Point(431, 238);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(160, 33);
-            this.btnExcluir.TabIndex = 44;
+            this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -207,9 +235,10 @@ namespace DesktopHotel.Forms
             this.btnSalvar.Location = new System.Drawing.Point(241, 238);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(160, 33);
-            this.btnSalvar.TabIndex = 43;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -222,40 +251,43 @@ namespace DesktopHotel.Forms
             this.btnNovo.Location = new System.Drawing.Point(51, 238);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(160, 33);
-            this.btnNovo.TabIndex = 42;
+            this.btnNovo.TabIndex = 8;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click_1);
             // 
-            // button1
+            // recarregar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(621, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 48;
-            this.button1.UseVisualStyleBackColor = true;
+            this.recarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("recarregar.BackgroundImage")));
+            this.recarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.recarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recarregar.FlatAppearance.BorderSize = 0;
+            this.recarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recarregar.Location = new System.Drawing.Point(621, 269);
+            this.recarregar.Name = "recarregar";
+            this.recarregar.Size = new System.Drawing.Size(25, 20);
+            this.recarregar.TabIndex = 50;
+            this.recarregar.UseVisualStyleBackColor = true;
+            this.recarregar.Click += new System.EventHandler(this.recarregar_Click_1);
             // 
             // gridHoteis
             // 
             this.gridHoteis.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gridHoteis.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.gridHoteis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridHoteis.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHoteis.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridHoteis.Location = new System.Drawing.Point(12, 295);
             this.gridHoteis.Name = "gridHoteis";
             this.gridHoteis.Size = new System.Drawing.Size(634, 264);
             this.gridHoteis.TabIndex = 48;
+            this.gridHoteis.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHoteis_CellClick);
             // 
             // FrmHoteis
             // 
@@ -264,7 +296,7 @@ namespace DesktopHotel.Forms
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(658, 571);
             this.Controls.Add(this.gridHoteis);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.recarregar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
@@ -285,6 +317,8 @@ namespace DesktopHotel.Forms
             this.Name = "FrmHoteis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotéis";
+            this.Load += new System.EventHandler(this.FrmHoteis_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHoteis_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridHoteis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -310,7 +344,7 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button recarregar;
         private System.Windows.Forms.DataGridView gridHoteis;
     }
 }

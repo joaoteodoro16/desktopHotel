@@ -7,34 +7,33 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DesktopHotel.Model
-{
+{/// <summary>
+/// 
+/// </summary>
     [Table("reservas")]
     public class ReservaModel
     {
         [Key()]
-        public int codigo { get; set; }
-        public String nomeHospede { get; set; }
+        public int RES_CODIGO { get; set; }
+        public String RES_NOME_HOSPEDE { get; set; }
 
-        public QuartoModel Quarto { get; set; }
+        public String RES_QUARTO { get; set; }
 
-        public String andar { get; set; }
+        public String RES_ANDAR { get; set; }
 
-        public String tipoQuarto { get; set; }
+        public String RES_TIPO_QUARTO { get; set; }
 
-        public String diaria { get; set; }
+        public Double RES_DIARIA { get; set; }
 
-        public DateTime dataCheckIn { get; set; }
+        public int RES_QTD_DIAS { get; set; }
 
-        public DateTime dataCheckOut { get; set; }
+        public double RES_PAGAMENTO { get; set; }
 
-        public int qtdDias { get; set; }
+        public double RES_TOTAL { get; set; }
 
-        public double pagamento { get; set; }
+        public String RES_VOUCHER { get; set; }
 
-        public String total { get; set; }
+        public int RES_PARCELADO { get; set; }
 
-        public String voucher { get; set; }
-
-        public String parceladoEm { get; set; }
     }
 }

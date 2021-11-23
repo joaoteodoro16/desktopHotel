@@ -74,7 +74,7 @@ namespace DesktopHotel.Forms
             this.txtAndar.Location = new System.Drawing.Point(109, 47);
             this.txtAndar.Name = "txtAndar";
             this.txtAndar.Size = new System.Drawing.Size(137, 22);
-            this.txtAndar.TabIndex = 16;
+            this.txtAndar.TabIndex = 1;
             // 
             // label1
             // 
@@ -92,7 +92,7 @@ namespace DesktopHotel.Forms
             this.txtValorDiaria.Location = new System.Drawing.Point(271, 47);
             this.txtValorDiaria.Name = "txtValorDiaria";
             this.txtValorDiaria.Size = new System.Drawing.Size(110, 22);
-            this.txtValorDiaria.TabIndex = 18;
+            this.txtValorDiaria.TabIndex = 2;
             // 
             // label2
             // 
@@ -123,10 +123,10 @@ namespace DesktopHotel.Forms
             "A",
             "B",
             "C"});
-            this.cmbTipo.Location = new System.Drawing.Point(407, 48);
+            this.cmbTipo.Location = new System.Drawing.Point(407, 47);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(121, 24);
-            this.cmbTipo.TabIndex = 22;
+            this.cmbTipo.TabIndex = 3;
             // 
             // btnNovo
             // 
@@ -136,10 +136,10 @@ namespace DesktopHotel.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(572, 75);
+            this.btnNovo.Location = new System.Drawing.Point(572, 36);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(125, 33);
-            this.btnNovo.TabIndex = 26;
+            this.btnNovo.TabIndex = 6;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -152,10 +152,10 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(572, 36);
+            this.btnSalvar.Location = new System.Drawing.Point(572, 75);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(125, 33);
-            this.btnSalvar.TabIndex = 27;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -171,7 +171,7 @@ namespace DesktopHotel.Forms
             this.btnExcluir.Location = new System.Drawing.Point(572, 114);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(125, 33);
-            this.btnExcluir.TabIndex = 29;
+            this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -192,7 +192,7 @@ namespace DesktopHotel.Forms
             this.txtDescricao.Location = new System.Drawing.Point(23, 123);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(505, 72);
-            this.txtDescricao.TabIndex = 31;
+            this.txtDescricao.TabIndex = 4;
             this.txtDescricao.Text = "";
             // 
             // gridQuartos
@@ -224,7 +224,7 @@ namespace DesktopHotel.Forms
             this.button4.Location = new System.Drawing.Point(672, 187);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(25, 20);
-            this.button4.TabIndex = 33;
+            this.button4.TabIndex = 50;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

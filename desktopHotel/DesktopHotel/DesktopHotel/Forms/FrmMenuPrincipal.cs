@@ -31,6 +31,52 @@ namespace DesktopHotel.Forms
             }
         }
 
-      
+        private void quartosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmQuartos frmQuartos = new FrmQuartos();
+            frmQuartos.ShowDialog(); // ShowDialog faz com que o frm seja um modal, ou seja, não cons
+        }
+
+        private void hóspedesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmHospedes frmHospedes = new FrmHospedes();
+            frmHospedes.ShowDialog(); 
+        }
+
+        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFuncionario frmFuncionario = new FrmFuncionario();
+            frmFuncionario.ShowDialog(); 
+        }
+
+        private void hotéisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHoteis frmHoteis = new FrmHoteis();
+            frmHoteis.ShowDialog();
+        }
+
+        private void produtosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmProduto frmProduto = new FrmProduto();
+            frmProduto.ShowDialog();
+        }
+
+        private void quartosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmQuartos frmQuartos = new FrmQuartos();
+            frmQuartos.ShowDialog();
+        }
+
+        private void reservasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmReservas frmReservas = new FrmReservas();
+            frmReservas.ShowDialog();
+        }
+
+        private void vistoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVistoria frmVistoria = new frmVistoria();
+            frmVistoria.ShowDialog();
+        }
     }
 }
