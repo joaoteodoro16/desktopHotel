@@ -130,11 +130,11 @@ namespace DesktopHotel.Forms
         {
             atualizaGrid();
 
-            gridQuartos.Columns["numero"].HeaderText = "Número";
-            gridQuartos.Columns["andar"].HeaderText = "Andar";
-            gridQuartos.Columns["valordiaria"].HeaderText = "Valor Diária";
-            gridQuartos.Columns["tipo"].HeaderText = "Tipo";
-            gridQuartos.Columns["descricao"].HeaderText = "Descrição";
+            //gridQuartos.Columns["numero"].HeaderText = "Número";
+            //gridQuartos.Columns["andar"].HeaderText = "Andar";
+            //gridQuartos.Columns["valordiaria"].HeaderText = "Valor Diária";
+            //gridQuartos.Columns["tipo"].HeaderText = "Tipo";
+            //gridQuartos.Columns["descricao"].HeaderText = "Descrição";
         }
 
         private void button4_Click(object sender, EventArgs e)

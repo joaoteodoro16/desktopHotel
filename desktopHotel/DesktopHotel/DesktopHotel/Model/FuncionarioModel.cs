@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesktopHotel.Model
 {
-    [Table("funcionarios")]
+    [Table("FUNCIONARIO")]
     public class FuncionarioModel
     {
         [Key()]
