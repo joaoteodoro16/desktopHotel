@@ -15,6 +15,8 @@ namespace DesktopHotel.Forms
 {
     public partial class FrmLogin : Form
     {
+        
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -43,7 +45,8 @@ namespace DesktopHotel.Forms
             {
               
                 FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
-                
+                login = loginDao.getLoginUser(login.user);
+                FrmMenuPrincipal.nomeOperador = login.username;
                 frmMenuPrincipal.Show();
                 this.Hide();
             }

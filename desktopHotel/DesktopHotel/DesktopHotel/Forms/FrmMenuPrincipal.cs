@@ -12,9 +12,14 @@ namespace DesktopHotel.Forms
 {
     public partial class FrmMenuPrincipal : Form
     {
+
+        public static String nomeOperador { get; set; }
+
         public FrmMenuPrincipal()
         {
             InitializeComponent();
+            
+     
         }
 
         private void FrmMenuPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -77,6 +82,17 @@ namespace DesktopHotel.Forms
         {
             frmVistoria frmVistoria = new frmVistoria();
             frmVistoria.ShowDialog();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            FrmReservas frmReservas = new FrmReservas();
+            frmReservas.ShowDialog();
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            txtNomeFunc.Text = nomeOperador;
         }
     }
 }
