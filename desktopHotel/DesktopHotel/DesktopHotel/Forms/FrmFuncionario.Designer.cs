@@ -443,9 +443,9 @@ namespace DesktopHotel.Forms
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(866, 255);
+            this.btnExcluir.Location = new System.Drawing.Point(913, 255);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(160, 33);
+            this.btnExcluir.Size = new System.Drawing.Size(113, 33);
             this.btnExcluir.TabIndex = 22;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -459,9 +459,9 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(676, 255);
+            this.btnSalvar.Location = new System.Drawing.Point(782, 255);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(160, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(113, 33);
             this.btnSalvar.TabIndex = 20;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -475,9 +475,9 @@ namespace DesktopHotel.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(486, 255);
+            this.btnNovo.Location = new System.Drawing.Point(654, 255);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(160, 33);
+            this.btnNovo.Size = new System.Drawing.Size(113, 33);
             this.btnNovo.TabIndex = 21;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;

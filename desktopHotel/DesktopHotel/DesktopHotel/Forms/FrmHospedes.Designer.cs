@@ -29,7 +29,7 @@ namespace DesktopHotel.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHospedes));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -245,17 +245,17 @@ namespace DesktopHotel.Forms
             this.gridHospedes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gridHospedes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.gridHospedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridHospedes.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridHospedes.Location = new System.Drawing.Point(21, 251);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHospedes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridHospedes.Location = new System.Drawing.Point(21, 245);
             this.gridHospedes.Name = "gridHospedes";
-            this.gridHospedes.Size = new System.Drawing.Size(893, 304);
+            this.gridHospedes.Size = new System.Drawing.Size(893, 310);
             this.gridHospedes.TabIndex = 38;
             this.gridHospedes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHospedes_CellClick);
             // 
@@ -267,9 +267,9 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(21, 202);
+            this.btnSalvar.Location = new System.Drawing.Point(21, 195);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(160, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(113, 33);
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Novo";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -282,9 +282,9 @@ namespace DesktopHotel.Forms
             this.btnSalva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalva.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalva.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalva.Location = new System.Drawing.Point(211, 202);
+            this.btnSalva.Location = new System.Drawing.Point(157, 195);
             this.btnSalva.Name = "btnSalva";
-            this.btnSalva.Size = new System.Drawing.Size(160, 33);
+            this.btnSalva.Size = new System.Drawing.Size(113, 33);
             this.btnSalva.TabIndex = 12;
             this.btnSalva.Text = "Salvar";
             this.btnSalva.UseVisualStyleBackColor = false;
@@ -298,9 +298,9 @@ namespace DesktopHotel.Forms
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(401, 202);
+            this.button2.Location = new System.Drawing.Point(290, 195);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 33);
+            this.button2.Size = new System.Drawing.Size(113, 33);
             this.button2.TabIndex = 14;
             this.button2.Text = "Excluir";
             this.button2.UseVisualStyleBackColor = false;

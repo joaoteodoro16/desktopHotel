@@ -125,7 +125,7 @@ namespace DesktopHotel.Forms
             "C"});
             this.cmbTipo.Location = new System.Drawing.Point(407, 47);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(121, 24);
+            this.cmbTipo.Size = new System.Drawing.Size(148, 24);
             this.cmbTipo.TabIndex = 3;
             // 
             // btnNovo
@@ -136,9 +136,9 @@ namespace DesktopHotel.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(572, 36);
+            this.btnNovo.Location = new System.Drawing.Point(584, 38);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(125, 33);
+            this.btnNovo.Size = new System.Drawing.Size(113, 33);
             this.btnNovo.TabIndex = 6;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -152,9 +152,9 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(572, 75);
+            this.btnSalvar.Location = new System.Drawing.Point(584, 77);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(125, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(113, 33);
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -168,9 +168,9 @@ namespace DesktopHotel.Forms
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(572, 114);
+            this.btnExcluir.Location = new System.Drawing.Point(584, 116);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(125, 33);
+            this.btnExcluir.Size = new System.Drawing.Size(113, 33);
             this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@ namespace DesktopHotel.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 100);
+            this.label4.Location = new System.Drawing.Point(19, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 30;
@@ -189,9 +189,9 @@ namespace DesktopHotel.Forms
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtDescricao.Location = new System.Drawing.Point(23, 123);
+            this.txtDescricao.Location = new System.Drawing.Point(23, 106);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(505, 72);
+            this.txtDescricao.Size = new System.Drawing.Size(532, 89);
             this.txtDescricao.TabIndex = 4;
             this.txtDescricao.Text = "";
             // 

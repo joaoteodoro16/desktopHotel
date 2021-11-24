@@ -181,7 +181,7 @@ namespace DesktopHotel.Forms
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSalvar.Location = new System.Drawing.Point(418, 135);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(117, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(113, 33);
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -196,7 +196,7 @@ namespace DesktopHotel.Forms
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExcluir.Location = new System.Drawing.Point(553, 135);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(117, 33);
+            this.btnExcluir.Size = new System.Drawing.Size(113, 33);
             this.btnExcluir.TabIndex = 12;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -230,7 +230,7 @@ namespace DesktopHotel.Forms
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNovo.Location = new System.Drawing.Point(687, 135);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(117, 33);
+            this.btnNovo.Size = new System.Drawing.Size(113, 33);
             this.btnNovo.TabIndex = 15;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;

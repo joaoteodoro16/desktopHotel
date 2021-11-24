@@ -48,7 +48,6 @@ namespace DesktopHotel.Forms
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.gridVistoria = new System.Windows.Forms.DataGridView();
-            this.recarregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridVistoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,9 +185,9 @@ namespace DesktopHotel.Forms
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(414, 224);
+            this.btnExcluir.Location = new System.Drawing.Point(278, 224);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(160, 33);
+            this.btnExcluir.Size = new System.Drawing.Size(113, 33);
             this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -202,9 +201,9 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(224, 224);
+            this.btnSalvar.Location = new System.Drawing.Point(150, 224);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(160, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(113, 33);
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -218,9 +217,9 @@ namespace DesktopHotel.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(34, 224);
+            this.btnNovo.Location = new System.Drawing.Point(25, 224);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(160, 33);
+            this.btnNovo.Size = new System.Drawing.Size(113, 33);
             this.btnNovo.TabIndex = 8;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -230,33 +229,18 @@ namespace DesktopHotel.Forms
             // 
             this.gridVistoria.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gridVistoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridVistoria.Location = new System.Drawing.Point(12, 300);
+            this.gridVistoria.Location = new System.Drawing.Point(12, 276);
             this.gridVistoria.Name = "gridVistoria";
-            this.gridVistoria.Size = new System.Drawing.Size(593, 242);
+            this.gridVistoria.Size = new System.Drawing.Size(579, 266);
             this.gridVistoria.TabIndex = 51;
             this.gridVistoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridVistoria_CellClick);
-            // 
-            // recarregar
-            // 
-            this.recarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("recarregar.BackgroundImage")));
-            this.recarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.recarregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.recarregar.FlatAppearance.BorderSize = 0;
-            this.recarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.recarregar.Location = new System.Drawing.Point(580, 274);
-            this.recarregar.Name = "recarregar";
-            this.recarregar.Size = new System.Drawing.Size(25, 20);
-            this.recarregar.TabIndex = 50;
-            this.recarregar.UseVisualStyleBackColor = true;
-            this.recarregar.Click += new System.EventHandler(this.recarregar_Click_1);
             // 
             // frmVistoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(617, 554);
-            this.Controls.Add(this.recarregar);
+            this.ClientSize = new System.Drawing.Size(611, 554);
             this.Controls.Add(this.gridVistoria);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
@@ -307,6 +291,5 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView gridVistoria;
-        private System.Windows.Forms.Button recarregar;
     }
 }
