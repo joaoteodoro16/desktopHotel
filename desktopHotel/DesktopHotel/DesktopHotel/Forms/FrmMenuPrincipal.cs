@@ -14,6 +14,7 @@ namespace DesktopHotel.Forms
     {
 
         public static String nomeOperador { get; set; }
+        public static String cargoOperador { get; set; }
 
         public FrmMenuPrincipal()
         {
@@ -93,6 +94,7 @@ namespace DesktopHotel.Forms
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             txtNomeFunc.Text = nomeOperador;
+            lblCargo.Text = cargoOperador;
         }
     }
 }

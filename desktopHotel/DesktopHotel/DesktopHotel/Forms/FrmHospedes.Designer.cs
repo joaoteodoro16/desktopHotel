@@ -29,19 +29,16 @@ namespace DesktopHotel.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHospedes));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtRg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDataNascimento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,6 +59,9 @@ namespace DesktopHotel.Forms
             this.label14 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridHospedes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@ namespace DesktopHotel.Forms
             // 
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(21, 43);
+            this.txtCodigo.Location = new System.Drawing.Point(21, 42);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(113, 22);
             this.txtCodigo.TabIndex = 14;
@@ -87,7 +87,7 @@ namespace DesktopHotel.Forms
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(157, 43);
+            this.txtNome.Location = new System.Drawing.Point(157, 42);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(413, 22);
             this.txtNome.TabIndex = 1;
@@ -102,31 +102,15 @@ namespace DesktopHotel.Forms
             this.label1.TabIndex = 17;
             this.label1.Text = "Nome";
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(593, 43);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(149, 22);
-            this.txtCpf.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(593, 18);
+            this.label2.Location = new System.Drawing.Point(572, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "CPF";
-            // 
-            // txtRg
-            // 
-            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRg.Location = new System.Drawing.Point(765, 43);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(149, 22);
-            this.txtRg.TabIndex = 3;
             // 
             // label3
             // 
@@ -141,7 +125,7 @@ namespace DesktopHotel.Forms
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(21, 100);
+            this.txtEmail.Location = new System.Drawing.Point(21, 97);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(267, 22);
             this.txtEmail.TabIndex = 4;
@@ -156,14 +140,6 @@ namespace DesktopHotel.Forms
             this.label4.TabIndex = 23;
             this.label4.Text = "E-mail";
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(317, 100);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(164, 22);
-            this.txtCelular.TabIndex = 5;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -177,7 +153,7 @@ namespace DesktopHotel.Forms
             // txtDataNascimento
             // 
             this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimento.Location = new System.Drawing.Point(510, 100);
+            this.txtDataNascimento.Location = new System.Drawing.Point(510, 97);
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(164, 22);
             this.txtDataNascimento.TabIndex = 6;
@@ -195,7 +171,7 @@ namespace DesktopHotel.Forms
             // txtSexo
             // 
             this.txtSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSexo.Location = new System.Drawing.Point(703, 100);
+            this.txtSexo.Location = new System.Drawing.Point(703, 97);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(211, 22);
             this.txtSexo.TabIndex = 7;
@@ -213,7 +189,7 @@ namespace DesktopHotel.Forms
             // txtEndereco
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(21, 158);
+            this.txtEndereco.Location = new System.Drawing.Point(21, 152);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(267, 22);
             this.txtEndereco.TabIndex = 8;
@@ -222,7 +198,7 @@ namespace DesktopHotel.Forms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 133);
+            this.label9.Location = new System.Drawing.Point(21, 128);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 20);
             this.label9.TabIndex = 31;
@@ -231,7 +207,7 @@ namespace DesktopHotel.Forms
             // txtCidade
             // 
             this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(317, 157);
+            this.txtCidade.Location = new System.Drawing.Point(317, 152);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(164, 22);
             this.txtCidade.TabIndex = 9;
@@ -240,7 +216,7 @@ namespace DesktopHotel.Forms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(312, 133);
+            this.label10.Location = new System.Drawing.Point(312, 128);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 20);
             this.label10.TabIndex = 33;
@@ -249,7 +225,7 @@ namespace DesktopHotel.Forms
             // txtBairro
             // 
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(510, 157);
+            this.txtBairro.Location = new System.Drawing.Point(510, 152);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(164, 22);
             this.txtBairro.TabIndex = 10;
@@ -258,7 +234,7 @@ namespace DesktopHotel.Forms
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(506, 134);
+            this.label11.Location = new System.Drawing.Point(506, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 20);
             this.label11.TabIndex = 35;
@@ -269,14 +245,14 @@ namespace DesktopHotel.Forms
             this.gridHospedes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gridHospedes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.gridHospedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridHospedes.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHospedes.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridHospedes.Location = new System.Drawing.Point(21, 251);
             this.gridHospedes.Name = "gridHospedes";
             this.gridHospedes.Size = new System.Drawing.Size(893, 304);
@@ -351,7 +327,7 @@ namespace DesktopHotel.Forms
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(703, 133);
+            this.label14.Location = new System.Drawing.Point(703, 128);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 20);
             this.label14.TabIndex = 46;
@@ -365,7 +341,7 @@ namespace DesktopHotel.Forms
             this.cmbEstado.Items.AddRange(new object[] {
             "ADM",
             "OPE"});
-            this.cmbEstado.Location = new System.Drawing.Point(707, 157);
+            this.cmbEstado.Location = new System.Drawing.Point(707, 152);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(207, 23);
             this.cmbEstado.TabIndex = 11;
@@ -383,12 +359,39 @@ namespace DesktopHotel.Forms
             this.button4.TabIndex = 43;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(576, 43);
+            this.txtCpf.Mask = "###,###,###-##";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(183, 20);
+            this.txtCpf.TabIndex = 47;
+            // 
+            // txtRg
+            // 
+            this.txtRg.Location = new System.Drawing.Point(769, 43);
+            this.txtRg.Mask = "###,###,###-##";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(145, 20);
+            this.txtRg.TabIndex = 48;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(321, 98);
+            this.txtCelular.Mask = "(##) #####-####";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(175, 20);
+            this.txtCelular.TabIndex = 49;
+            // 
             // FrmHospedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(934, 567);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtRg);
+            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -408,13 +411,10 @@ namespace DesktopHotel.Forms
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtDataNascimento);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtRg);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
@@ -437,13 +437,10 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtRg;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDataNascimento;
         private System.Windows.Forms.Label label7;
@@ -464,5 +461,8 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtRg;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
     }
 }

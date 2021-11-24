@@ -42,8 +42,6 @@ namespace DesktopHotel.Model.DAO
         {
             return c.Funcionario.Where(f => f.FUN_CPF == cpf).FirstOrDefault();
         }
-
-
-
+       
     }
 }

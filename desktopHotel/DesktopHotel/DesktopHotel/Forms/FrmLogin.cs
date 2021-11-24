@@ -46,6 +46,7 @@ namespace DesktopHotel.Forms
               
                 FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
                 login = loginDao.getLoginUser(login.user);
+
                 FrmMenuPrincipal.nomeOperador = login.username;
                 frmMenuPrincipal.Show();
                 this.Hide();

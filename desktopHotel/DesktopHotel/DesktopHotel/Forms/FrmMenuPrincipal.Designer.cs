@@ -50,7 +50,7 @@ namespace DesktopHotel.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeFunc = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@ namespace DesktopHotel.Forms
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1332, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1328, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -175,7 +175,7 @@ namespace DesktopHotel.Forms
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 24);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 710);
+            this.panel9.Size = new System.Drawing.Size(255, 706);
             this.panel9.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -189,7 +189,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(255, 710);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(255, 706);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel3
@@ -197,7 +197,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel3.Controls.Add(this.panel1);
             this.flowLayoutPanel3.Controls.Add(this.label1);
             this.flowLayoutPanel3.Controls.Add(this.txtNomeFunc);
-            this.flowLayoutPanel3.Controls.Add(this.label3);
+            this.flowLayoutPanel3.Controls.Add(this.lblCargo);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -247,17 +247,17 @@ namespace DesktopHotel.Forms
             this.txtNomeFunc.Text = "Usuário";
             this.txtNomeFunc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblCargo
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(3, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(252, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Gerente";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCargo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCargo.Location = new System.Drawing.Point(3, 198);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(252, 24);
+            this.lblCargo.TabIndex = 3;
+            this.lblCargo.Text = "Gerente";
+            this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -325,7 +325,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(255, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1077, 710);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 706);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // FrmMenuPrincipal
@@ -333,7 +333,7 @@ namespace DesktopHotel.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1332, 734);
+            this.ClientSize = new System.Drawing.Size(1328, 730);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel9);
@@ -377,7 +377,7 @@ namespace DesktopHotel.Forms
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtNomeFunc;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
