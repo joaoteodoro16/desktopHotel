@@ -47,9 +47,10 @@ namespace DesktopHotel.Forms
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridOperadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace DesktopHotel.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 68);
+            this.label1.Location = new System.Drawing.Point(222, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 0;
@@ -66,7 +67,7 @@ namespace DesktopHotel.Forms
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(26, 93);
+            this.txtUsuario.Location = new System.Drawing.Point(222, 40);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(190, 22);
             this.txtUsuario.TabIndex = 1;
@@ -75,7 +76,7 @@ namespace DesktopHotel.Forms
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(26, 149);
+            this.txtSenha.Location = new System.Drawing.Point(418, 40);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(190, 22);
             this.txtSenha.TabIndex = 2;
@@ -84,7 +85,7 @@ namespace DesktopHotel.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 124);
+            this.label2.Location = new System.Drawing.Point(418, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 2;
@@ -93,7 +94,7 @@ namespace DesktopHotel.Forms
             // txtSenha2
             // 
             this.txtSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha2.Location = new System.Drawing.Point(26, 211);
+            this.txtSenha2.Location = new System.Drawing.Point(614, 40);
             this.txtSenha2.Name = "txtSenha2";
             this.txtSenha2.Size = new System.Drawing.Size(190, 22);
             this.txtSenha2.TabIndex = 3;
@@ -102,7 +103,7 @@ namespace DesktopHotel.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 186);
+            this.label3.Location = new System.Drawing.Point(614, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 4;
@@ -110,17 +111,18 @@ namespace DesktopHotel.Forms
             // 
             // txtNomeFunc
             // 
+            this.txtNomeFunc.Enabled = false;
             this.txtNomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeFunc.Location = new System.Drawing.Point(26, 273);
+            this.txtNomeFunc.Location = new System.Drawing.Point(26, 90);
             this.txtNomeFunc.Name = "txtNomeFunc";
-            this.txtNomeFunc.Size = new System.Drawing.Size(190, 22);
+            this.txtNomeFunc.Size = new System.Drawing.Size(386, 22);
             this.txtNomeFunc.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 248);
+            this.label4.Location = new System.Drawing.Point(26, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 20);
             this.label4.TabIndex = 6;
@@ -134,7 +136,7 @@ namespace DesktopHotel.Forms
             this.cmbNivel.Items.AddRange(new object[] {
             "ADM",
             "OPE"});
-            this.cmbNivel.Location = new System.Drawing.Point(26, 331);
+            this.cmbNivel.Location = new System.Drawing.Point(418, 90);
             this.cmbNivel.Name = "cmbNivel";
             this.cmbNivel.Size = new System.Drawing.Size(190, 23);
             this.cmbNivel.TabIndex = 8;
@@ -144,7 +146,7 @@ namespace DesktopHotel.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 306);
+            this.label5.Location = new System.Drawing.Point(418, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 9;
@@ -163,12 +165,11 @@ namespace DesktopHotel.Forms
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridOperadores.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridOperadores.Location = new System.Drawing.Point(239, 28);
+            this.gridOperadores.Location = new System.Drawing.Point(26, 185);
             this.gridOperadores.Name = "gridOperadores";
-            this.gridOperadores.Size = new System.Drawing.Size(625, 510);
+            this.gridOperadores.Size = new System.Drawing.Size(778, 173);
             this.gridOperadores.TabIndex = 10;
             this.gridOperadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridOperadores_CellClick);
-           
             // 
             // btnSalvar
             // 
@@ -178,9 +179,9 @@ namespace DesktopHotel.Forms
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(26, 431);
+            this.btnSalvar.Location = new System.Drawing.Point(418, 135);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(190, 33);
+            this.btnSalvar.Size = new System.Drawing.Size(117, 33);
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -193,9 +194,9 @@ namespace DesktopHotel.Forms
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(26, 470);
+            this.btnExcluir.Location = new System.Drawing.Point(553, 135);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(190, 33);
+            this.btnExcluir.Size = new System.Drawing.Size(117, 33);
             this.btnExcluir.TabIndex = 12;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -227,33 +228,19 @@ namespace DesktopHotel.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(26, 509);
+            this.btnNovo.Location = new System.Drawing.Point(687, 135);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(190, 33);
+            this.btnNovo.Size = new System.Drawing.Size(117, 33);
             this.btnNovo.TabIndex = 15;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(839, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(25, 20);
-            this.button4.TabIndex = 16;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 365);
+            this.label7.Location = new System.Drawing.Point(614, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 20);
             this.label7.TabIndex = 18;
@@ -267,21 +254,42 @@ namespace DesktopHotel.Forms
             this.cmbStatus.Items.AddRange(new object[] {
             "ATIVO",
             "INATIVO"});
-            this.cmbStatus.Location = new System.Drawing.Point(26, 390);
+            this.cmbStatus.Location = new System.Drawing.Point(614, 89);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(190, 23);
             this.cmbStatus.TabIndex = 17;
             this.cmbStatus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cmbStatus_KeyUp);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(26, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "CPF";
+            // 
+            // mskCpf
+            // 
+            this.mskCpf.Location = new System.Drawing.Point(30, 139);
+            this.mskCpf.Mask = "###,###,###-##";
+            this.mskCpf.Name = "mskCpf";
+            this.mskCpf.Size = new System.Drawing.Size(186, 20);
+            this.mskCpf.TabIndex = 21;
+            this.mskCpf.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCpf_KeyDown);
+            this.mskCpf.Leave += new System.EventHandler(this.mskCpf_Leave);
+            // 
             // FrmCadOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(886, 550);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(835, 377);
+            this.Controls.Add(this.mskCpf);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label6);
@@ -299,8 +307,8 @@ namespace DesktopHotel.Forms
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(902, 589);
-            this.MinimumSize = new System.Drawing.Size(902, 538);
+            this.MaximumSize = new System.Drawing.Size(851, 416);
+            this.MinimumSize = new System.Drawing.Size(851, 416);
             this.Name = "FrmCadOperador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de operadores";
@@ -329,8 +337,9 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox mskCpf;
     }
 }

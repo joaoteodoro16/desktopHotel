@@ -49,7 +49,7 @@ namespace DesktopHotel.Model.DAO
         public void cadastraOperador(LoginModel login)
         {
             
-             query = $"INSERT INTO LOGIN (LOG_USER,LOG_USERNAME,LOG_SENHA,LOG_NIVEL,LOG_STATUS) VALUES ('{login.user}','{login.username}','{login.senha}','{login.nivel}','{login.status}')";
+             query = $"INSERT INTO LOGIN (LOG_USER,LOG_USERNAME,LOG_SENHA,LOG_NIVEL,LOG_STATUS,LOG_CPF) VALUES ('{login.user}','{login.username}','{login.senha}','{login.nivel}','{login.status}','{login.cpf}')";
             try
             {
                 executaQuery.executaComando(query);
@@ -83,6 +83,7 @@ namespace DesktopHotel.Model.DAO
                         senha = dados.Rows[i]["log_senha"].ToString(),
                         nivel = dados.Rows[i]["log_nivel"].ToString(),
                         status = dados.Rows[i]["log_status"].ToString(),
+                        cpf = dados.Rows[i]["log_cpf"].ToString()
                     };
                     lista.Add(item);
 
@@ -118,6 +119,7 @@ namespace DesktopHotel.Model.DAO
                         senha = dados.Rows[0]["log_senha"].ToString(),
                         nivel = dados.Rows[0]["log_nivel"].ToString(),
                         status = dados.Rows[0]["log_status"].ToString(),
+                        cpf = dados.Rows[0]["log_cpf"].ToString()
                     };
                     conn.desconectar();
                     return item;
@@ -217,7 +219,7 @@ namespace DesktopHotel.Model.DAO
         public void alterarOperador(LoginModel login)
         {
             query = $"UPDATE LOGIN SET LOG_USER = '{login.user}', LOG_USERNAME = '{login.username}'," +
-                $" LOG_SENHA = '{login.senha}', LOG_NIVEL = '{login.nivel}', LOG_STATUS = '{login.status}'" +
+                $" LOG_SENHA = '{login.senha}', LOG_NIVEL = '{login.nivel}', LOG_STATUS = '{login.status}', LOG_CPF = '{login.cpf} '" +
                 $" WHERE LOG_COD = '{login.codigo}' ";
 
             try {
@@ -258,5 +260,34 @@ namespace DesktopHotel.Model.DAO
                 return false;
             }
         }
+
+
+        public bool verificaCPFCadastrado(LoginModel login)
+        {
+            query = $"SELECT * FROM LOGIN where LOG_CPF = '{login.cpf}' AND LOG_STATUS <> 'I'";
+
+            try
+            {
+                DataTable dados = executaQuery.executaComandoLista(query);
+
+                if (dados.Rows.Count == 1)
+                {
+                    conn.desconectar();
+                    return true;
+                }
+                else
+                {
+                    conn.desconectar();
+                    return false;
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro ao buscar login" + ex.Message);
+                return false;
+            }
+        }
+
+
     }
 }

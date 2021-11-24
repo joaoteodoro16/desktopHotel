@@ -36,5 +36,14 @@ namespace DesktopHotel.Model.DAO
             c.Funcionario.Remove(f);
             c.SaveChanges();
         }
+
+
+        public FuncionarioModel buscaPorCpf(string cpf)
+        {
+            return c.Funcionario.Where(f => f.FUN_CPF == cpf).FirstOrDefault();
+        }
+
+
+
     }
 }

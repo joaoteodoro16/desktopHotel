@@ -1,5 +1,6 @@
 ﻿using DesktopHotel.Model;
 using DesktopHotel.Model.DAO;
+using DesktopHotel.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,19 +37,29 @@ namespace DesktopHotel.Forms
                 return;
             }
 
-          
+            if (mskCpf.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor informe o CPF do funcionário", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (!txtCodigo.Text.Equals(""))
             {
                 login.codigo = Convert.ToInt32(txtCodigo.Text);
             }
 
-
+           
           
             login.user = txtUsuario.Text;
-            login.username = txtNomeFunc.Text;
             login.senha = txtSenha.Text;
             login.nivel = cmbNivel.Text;
+            login.cpf = mskCpf.Text;
+
+            if (!txtNomeFunc.Text.Equals(""))
+            {
+                login.username = txtNomeFunc.Text;
+            }
 
             if (cmbStatus.Text.Equals("ATIVO"))
             {
@@ -58,8 +69,8 @@ namespace DesktopHotel.Forms
                 login.status = "I";
             }
 
-            if (login.username.Equals("") || login.user.Equals("") || login.senha.Equals("")
-                || txtSenha2.Text.Equals("") || login.nivel.Equals("") || login.status.Equals(""))
+            if (login.username == null || login.user.Equals("") || login.senha.Equals("")
+                || txtSenha2.Text.Equals("") || login.nivel.Equals("") || login.status.Equals("") || login.cpf.Equals(""))
             {
                 MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -77,10 +88,27 @@ namespace DesktopHotel.Forms
                     return;
                 }
 
-                logindao.cadastraOperador(login);
+                login.username = txtNomeFunc.Text;
+
+                if (login.username != null)
+                {
+                    bool verificaCpf = logindao.verificaCPFCadastrado(login);
+
+                    if (verificaCpf != true)
+                    {
+                        logindao.cadastraOperador(login);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esse CPF já foi cadastrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    
+                }
             }
             else
             {
+                login.username = txtNomeFunc.Text;
                 logindao.alterarOperador(login);
             }
             
@@ -111,6 +139,7 @@ namespace DesktopHotel.Forms
             gridOperadores.Columns["senha"].HeaderText = "Senha";
             gridOperadores.Columns["nivel"].HeaderText = "Nível";
             gridOperadores.Columns["status"].HeaderText = "Status";
+            gridOperadores.Columns["cpf"].HeaderText = "CPF";
             
         }
 
@@ -136,6 +165,7 @@ namespace DesktopHotel.Forms
                     txtNomeFunc.Text = login.username;
                     cmbNivel.Text = login.nivel;
                     cmbStatus.Text = login.status;
+                    mskCpf.Text = login.cpf;
 
                     }
 
@@ -161,6 +191,7 @@ namespace DesktopHotel.Forms
             txtSenha2.Text = "";
             cmbNivel.Text = "";
             cmbStatus.Text = "";
+            mskCpf.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -185,6 +216,7 @@ namespace DesktopHotel.Forms
             txtSenha2.Text = login.senha;
             txtNomeFunc.Text = login.username;
             cmbNivel.Text = login.nivel;
+            mskCpf.Text = login.cpf;
 
             if (login.status.Equals("A"))
             {
@@ -202,6 +234,34 @@ namespace DesktopHotel.Forms
             cmbStatus.Text = "";
         }
 
-        
+        private void mskCpf_Leave(object sender, EventArgs e)
+        {
+            buscaNomeFuncionario();
+        }
+
+        public void buscaNomeFuncionario()
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            FuncionarioModel func = funcionarioDAO.buscaPorCpf(mskCpf.Text);
+
+            
+            if(func != null)
+            {
+                txtNomeFunc.Text = func.FUN_NOME;
+            }
+            else
+            {
+                MessageErroUtil.mensagemErro("Esse CPF já foi utilizado",true);
+            }
+
+        }
+
+        private void mskCpf_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13))
+            {
+                buscaNomeFuncionario();
+            }
+        }
     }
 }

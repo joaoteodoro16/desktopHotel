@@ -15,6 +15,7 @@ namespace DesktopHotel.Model
         public String senha { get; set; }
         public String nivel { get; set; }
         public String status { get; set; }
+        public String cpf { get; set; }
 
     }
 }
