@@ -86,6 +86,21 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -131,6 +146,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\BasicContext.cs" />
+    <Compile Include="DataSet\DataSetFuncionario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFuncionario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetHospede.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHospede.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetHoteis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHoteis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetProduto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProduto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetQuarto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetQuarto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetReserva.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReserva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetVistoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVistoria.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCadOperador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +241,48 @@
     <Compile Include="Forms\FrmVistoria.Designer.cs">
       <DependentUpon>FrmVistoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Rel\RelFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelFuncionario.Designer.cs">
+      <DependentUpon>RelFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rel\RelHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelHospede.Designer.cs">
+      <DependentUpon>RelHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rel\RelHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelHotel.Designer.cs">
+      <DependentUpon>RelHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rel\RelProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelProduto.Designer.cs">
+      <DependentUpon>RelProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rel\RelQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelQuarto.Designer.cs">
+      <DependentUpon>RelQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rel\RelReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelReserva.Designer.cs">
+      <DependentUpon>RelReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rel\RelVistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rel\RelVistoria.Designer.cs">
+      <DependentUpon>RelVistoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\DAO\FuncionarioDAO.cs" />
     <Compile Include="Model\DAO\HospedeDao.cs" />
     <Compile Include="Model\DAO\HotelDAO.cs" />
@@ -243,6 +335,27 @@
     <EmbeddedResource Include="Forms\FrmVistoria.resx">
       <DependentUpon>FrmVistoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelFuncionario.resx">
+      <DependentUpon>RelFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelHospede.resx">
+      <DependentUpon>RelHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelHotel.resx">
+      <DependentUpon>RelHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelProduto.resx">
+      <DependentUpon>RelProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelQuarto.resx">
+      <DependentUpon>RelQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelReserva.resx">
+      <DependentUpon>RelReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rel\RelVistoria.resx">
+      <DependentUpon>RelVistoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -253,6 +366,90 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorio\RelFuncionario.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelHospede.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelHotel.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelProduto.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelQuarto.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelReserva.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelVistoria.rdlc" />
+    <None Include="DataSet\DataSetFuncionario.xsc">
+      <DependentUpon>DataSetFuncionario.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetFuncionario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFuncionario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetFuncionario.xss">
+      <DependentUpon>DataSetFuncionario.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetHospede.xsc">
+      <DependentUpon>DataSetHospede.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetHospede.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHospede.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetHospede.xss">
+      <DependentUpon>DataSetHospede.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetHoteis.xsc">
+      <DependentUpon>DataSetHoteis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetHoteis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHoteis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetHoteis.xss">
+      <DependentUpon>DataSetHoteis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetProduto.xsc">
+      <DependentUpon>DataSetProduto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetProduto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProduto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetProduto.xss">
+      <DependentUpon>DataSetProduto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetQuarto.xsc">
+      <DependentUpon>DataSetQuarto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetQuarto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetQuarto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetQuarto.xss">
+      <DependentUpon>DataSetQuarto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetReserva.xsc">
+      <DependentUpon>DataSetReserva.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetReserva.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReserva.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetReserva.xss">
+      <DependentUpon>DataSetReserva.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetVistoria.xsc">
+      <DependentUpon>DataSetVistoria.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetVistoria.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVistoria.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetVistoria.xss">
+      <DependentUpon>DataSetVistoria.xsd</DependentUpon>
+    </None>
     <None Include="DesktopHotel_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -302,6 +499,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Logo branca.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -315,6 +513,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopHotel.Forms.Rel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -95,6 +96,48 @@ namespace DesktopHotel.Forms
         {
             txtNomeFunc.Text = nomeOperador;
             lblCargo.Text = cargoOperador;
+        }
+
+        private void quartoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelQuarto relQuarto = new RelQuarto();
+            relQuarto.ShowDialog();
+        }
+
+        private void hóspedesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelHospede relHospede = new RelHospede();
+            relHospede.ShowDialog();
+        }
+
+        private void funcionáriosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RelFuncionario relFuncionario = new RelFuncionario();
+            relFuncionario.ShowDialog();
+        }
+
+        private void hotéisToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RelHotel relHotel = new RelHotel();
+            relHotel.ShowDialog();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelProduto relProduto = new RelProduto();
+            relProduto.ShowDialog();
+        }
+
+        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelReserva relReserva = new RelReserva();
+            relReserva.ShowDialog();
+        }
+
+        private void vistoriaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RelVistoria relVistoria = new RelVistoria();
+            relVistoria.ShowDialog();
         }
     }
 }

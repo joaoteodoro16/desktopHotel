@@ -37,10 +37,16 @@ namespace DesktopHotel.Forms
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hotéisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.quartosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vistoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quartoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hóspedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hotéisToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistoriaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.financeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -75,7 +81,7 @@ namespace DesktopHotel.Forms
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1328, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1312, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,7 +93,6 @@ namespace DesktopHotel.Forms
             this.funcionáriosToolStripMenuItem,
             this.hotéisToolStripMenuItem,
             this.produtosToolStripMenuItem1,
-            this.quartosToolStripMenuItem1,
             this.reservasToolStripMenuItem1,
             this.vistoriaToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
@@ -97,64 +102,114 @@ namespace DesktopHotel.Forms
             // quartosToolStripMenuItem
             // 
             this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
-            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quartosToolStripMenuItem.Text = "Quartos";
             this.quartosToolStripMenuItem.Click += new System.EventHandler(this.quartosToolStripMenuItem_Click);
             // 
             // hóspedesToolStripMenuItem1
             // 
             this.hóspedesToolStripMenuItem1.Name = "hóspedesToolStripMenuItem1";
-            this.hóspedesToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.hóspedesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.hóspedesToolStripMenuItem1.Text = "Hóspedes";
             this.hóspedesToolStripMenuItem1.Click += new System.EventHandler(this.hóspedesToolStripMenuItem1_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // hotéisToolStripMenuItem
             // 
             this.hotéisToolStripMenuItem.Name = "hotéisToolStripMenuItem";
-            this.hotéisToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.hotéisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hotéisToolStripMenuItem.Text = "Hotéis";
             this.hotéisToolStripMenuItem.Click += new System.EventHandler(this.hotéisToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem1.Text = "Produtos";
             this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
-            // 
-            // quartosToolStripMenuItem1
-            // 
-            this.quartosToolStripMenuItem1.Name = "quartosToolStripMenuItem1";
-            this.quartosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.quartosToolStripMenuItem1.Text = "Quartos";
-            this.quartosToolStripMenuItem1.Click += new System.EventHandler(this.quartosToolStripMenuItem1_Click);
             // 
             // reservasToolStripMenuItem1
             // 
             this.reservasToolStripMenuItem1.Name = "reservasToolStripMenuItem1";
-            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.reservasToolStripMenuItem1.Text = "Reservas";
             this.reservasToolStripMenuItem1.Click += new System.EventHandler(this.reservasToolStripMenuItem1_Click);
             // 
             // vistoriaToolStripMenuItem
             // 
             this.vistoriaToolStripMenuItem.Name = "vistoriaToolStripMenuItem";
-            this.vistoriaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.vistoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vistoriaToolStripMenuItem.Text = "Vistoria";
             this.vistoriaToolStripMenuItem.Click += new System.EventHandler(this.vistoriaToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quartoToolStripMenuItem,
+            this.hóspedesToolStripMenuItem,
+            this.funcionáriosToolStripMenuItem1,
+            this.hotéisToolStripMenuItem1,
+            this.produtosToolStripMenuItem,
+            this.reservasToolStripMenuItem,
+            this.vistoriaToolStripMenuItem1});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // quartoToolStripMenuItem
+            // 
+            this.quartoToolStripMenuItem.Name = "quartoToolStripMenuItem";
+            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.quartoToolStripMenuItem.Text = "Quartos";
+            this.quartoToolStripMenuItem.Click += new System.EventHandler(this.quartoToolStripMenuItem_Click);
+            // 
+            // hóspedesToolStripMenuItem
+            // 
+            this.hóspedesToolStripMenuItem.Name = "hóspedesToolStripMenuItem";
+            this.hóspedesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.hóspedesToolStripMenuItem.Text = "Hóspedes";
+            this.hóspedesToolStripMenuItem.Click += new System.EventHandler(this.hóspedesToolStripMenuItem_Click);
+            // 
+            // funcionáriosToolStripMenuItem1
+            // 
+            this.funcionáriosToolStripMenuItem1.Name = "funcionáriosToolStripMenuItem1";
+            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.funcionáriosToolStripMenuItem1.Text = "Funcionários";
+            this.funcionáriosToolStripMenuItem1.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem1_Click);
+            // 
+            // hotéisToolStripMenuItem1
+            // 
+            this.hotéisToolStripMenuItem1.Name = "hotéisToolStripMenuItem1";
+            this.hotéisToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.hotéisToolStripMenuItem1.Text = "Hotéis";
+            this.hotéisToolStripMenuItem1.Click += new System.EventHandler(this.hotéisToolStripMenuItem1_Click);
+            // 
+            // produtosToolStripMenuItem
+            // 
+            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // reservasToolStripMenuItem
+            // 
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.reservasToolStripMenuItem.Text = "Reservas";
+            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
+            // 
+            // vistoriaToolStripMenuItem1
+            // 
+            this.vistoriaToolStripMenuItem1.Name = "vistoriaToolStripMenuItem1";
+            this.vistoriaToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.vistoriaToolStripMenuItem1.Text = "Vistoria";
+            this.vistoriaToolStripMenuItem1.Click += new System.EventHandler(this.vistoriaToolStripMenuItem1_Click);
             // 
             // financeiroToolStripMenuItem
             // 
@@ -175,7 +230,7 @@ namespace DesktopHotel.Forms
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 24);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 706);
+            this.panel9.Size = new System.Drawing.Size(255, 690);
             this.panel9.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -189,7 +244,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(255, 706);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(255, 690);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel3
@@ -261,7 +316,6 @@ namespace DesktopHotel.Forms
             // 
             // label4
             // 
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
@@ -276,7 +330,6 @@ namespace DesktopHotel.Forms
             // 
             // label5
             // 
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
@@ -291,7 +344,6 @@ namespace DesktopHotel.Forms
             // 
             // label6
             // 
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
@@ -325,7 +377,7 @@ namespace DesktopHotel.Forms
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(255, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 706);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1057, 690);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // FrmMenuPrincipal
@@ -333,7 +385,7 @@ namespace DesktopHotel.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1328, 730);
+            this.ClientSize = new System.Drawing.Size(1312, 714);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel9);
@@ -391,8 +443,14 @@ namespace DesktopHotel.Forms
         private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hotéisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem quartosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vistoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quartoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hóspedesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem hotéisToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vistoriaToolStripMenuItem1;
     }
 }

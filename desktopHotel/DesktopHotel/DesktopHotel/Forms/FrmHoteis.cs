@@ -184,12 +184,6 @@ namespace DesktopHotel.Forms
             txtNome.Focus();
         }
 
-        private void recarregar_Click_1(object sender, EventArgs e)
-        {
-            pesquisar();
-            
-        }
-
         private void gridHoteis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             mostra(getHotelGrid());
